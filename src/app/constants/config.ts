@@ -1,0 +1,1 @@
+export const ApiUrlSegment = "integration/v2"

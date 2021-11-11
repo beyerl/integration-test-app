@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="navbar-brand">{{brandName}}</div>
+    <button type="button" class="navbar-toggler" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+        aria-controls="navbarCollapse"><span class="navbar-toggler-icon"></span>
+    </button>
+    <hr>
+    <div class="collapse navbar-collapse" id="navbarCollapse" [collapse]="isCollapsed">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown px-1" dropdown #dropdown="bs-dropdown" *ngFor="let dropdown of dropdowns; index as i">
+                <button [id]="dropdown.title+'-button'" dropdownToggle type="button" class="btn {{dropdown.btnClass}} dropdown-toggle"
+                    aria-controls="dropdown-basic" (click)="onToggleDropdown(i)">{{dropdown.title}}<span class="caret"></span>
+                </button>
+                <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu">
+                    <li role="menuitem" *ngFor="let item of dropdown.items">
+                        <a class="dropdown-item" (click)="item.onClick(item.key)">{{item.title}}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,11 @@
+<div class="h-100 d-flex flex-column">
+    <div class="flex-grow-1">
+        URL: {{getIframeSrc(endpoint)}}
+    </div>
+    <app-iframe class="h-100" *ngIf="getDoesIntegrationTypeRequireIframe(endpoint.integrationType); else link"
+        [iframeSrc]="getIframeSrc(endpoint)">
+    </app-iframe>
+    <ng-template #link>
+        <a [href]="getIframeSrc(endpoint)">Download</a>
+    </ng-template>
+</div>
