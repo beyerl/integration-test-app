@@ -1,10 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { combineLatest, Subscription } from 'rxjs';
 import { EnvironmentService } from 'src/app/services/environment.service';
-import { IEndpoint, IIntegrationType } from 'src/app/services/endpoint.models';
-import { EndpointService } from 'src/app/services/endpoint.service';
-import { isNullishOrEmptyString } from 'src/app/helpers/utils';
+import { IEndpoint, IEndpointVisitor, IIntegrationType } from 'src/app/view-logic/endpoint/endpoint.models';
+import { IEnvironment } from 'src/app/services/environment.model';
+import { IUsecase } from 'src/app/services/usecase.model';
 
 @Component({
   selector: 'app-endpoint',
@@ -17,10 +17,11 @@ export class EndpointComponent implements OnInit, OnDestroy {
 
   endPoint: IEndpoint
 
+  @Input() endpointVisitor: IEndpointVisitor
+
   constructor(
     private environmentService: EnvironmentService,
-    private route: ActivatedRoute,
-    private endpointService: EndpointService
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -28,7 +29,7 @@ export class EndpointComponent implements OnInit, OnDestroy {
     const route$ = this.route.params
 
     this.endpointSubscription = combineLatest([environment$, route$]).subscribe(
-      ([environment, route]) => this.endpoint = this.endpointService.getEndpoint(environment, route.integrationType, route.usecase)
+      ([environment, route]) => this.endpoint = this.endpointVisitor.getEndpoint(environment, route.integrationType, route.usecase)
     )
   }
 
@@ -36,27 +37,7 @@ export class EndpointComponent implements OnInit, OnDestroy {
     this.endpointSubscription.unsubscribe()
   }
 
-  getIframeSrc(endpoint: IEndpoint) {
-    switch (endpoint.integrationType) {
-      case IIntegrationType.Catalog:
-        return !isNullishOrEmptyString(endpoint.catalogItemKeyType)
-          ? `${endpoint.domain}/${endpoint.apiUrlSegment}/${IIntegrationType.Catalog}/${endpoint.catalogKey}/${endpoint.catalogItemKeyType}/${endpoint.catalogItemKey}?integrationKey=${endpoint.integrationKey}`
-          : !isNullishOrEmptyString(endpoint.searchTerm)
-            ? `${endpoint.domain}/${endpoint.apiUrlSegment}/${IIntegrationType.Catalog}/${endpoint.catalogKey}/search?searchTerm=${endpoint.searchTerm}&integrationKey=${endpoint.integrationKey}`
-            : `${endpoint.domain}/${endpoint.apiUrlSegment}/${IIntegrationType.Catalog}/${endpoint.catalogKey}?integrationKey=${endpoint.integrationKey}`
-      case IIntegrationType.CatalogItem:
-        return `${endpoint.domain}/${endpoint.apiUrlSegment}/${IIntegrationType.CatalogItem}/${endpoint.catalogItemKeyType}/${endpoint.catalogItemKey}?integrationKey=${endpoint.integrationKey}`
-      case IIntegrationType.ExportDialog:
-        return `${endpoint.domain}/${endpoint.apiUrlSegment}/${IIntegrationType.ExportDialog}/${endpoint.catalogItemKeyType}/${endpoint.catalogItemKey}?integrationKey=${endpoint.integrationKey}`
-      case IIntegrationType.DirectExport:
-        return `${endpoint.domain}/${endpoint.apiUrlSegment}/${IIntegrationType.DirectExport}/${endpoint.catalogItemKeyType}/${endpoint.catalogItemKey}?integrationKey=${endpoint.integrationKey}&exportFormat=${endpoint.exportFormat}`
-      default:
-        throw new Error(`Enum argument out of range for integrationtype ${endpoint.integrationType}`)
-    }
-  }
-
   getDoesIntegrationTypeRequireIframe(integrationType: IIntegrationType) {
     return [IIntegrationType.Catalog, IIntegrationType.CatalogItem, IIntegrationType.ExportDialog].includes(integrationType)
   }
 }
-

@@ -1,11 +1,11 @@
 <div class="h-100 d-flex flex-column">
-    <div [ngClass]="{'flex-grow-1': getDoesIntegrationTypeRequireIframe(endpoint.integrationType)}">
-        URL: {{getIframeSrc(endpoint)}}
+    <div [ngClass]="{'flex-grow-1': getDoesIntegrationTypeRequireIframe(endpoint?.integrationType)}">
+        URL: {{endpointVisitor.getIframeSrc(endpoint)}}
     </div>
-    <app-iframe class="h-100" *ngIf="getDoesIntegrationTypeRequireIframe(endpoint.integrationType); else link"
-        [iframeSrc]="getIframeSrc(endpoint)">
+    <app-iframe class="h-100" *ngIf="getDoesIntegrationTypeRequireIframe(endpoint?.integrationType); else link"
+        [iframeSrc]="endpointVisitor.getIframeSrc(endpoint)">
     </app-iframe>
     <ng-template #link>
-        <a [href]="getIframeSrc(endpoint)">Download</a>
+        <a [href]="endpointVisitor.getIframeSrc(endpoint)">Download</a>
     </ng-template>
 </div>

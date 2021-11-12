@@ -1,6 +1,6 @@
-import { ITestdata } from "src/app/services/test-data.model";
+import { IIntegrationV2Testdata } from "src/app/services/test-data.model";
 
-export const IntegrationV2CatalogItemData: { [key: string]: ITestdata } = {
+export const IntegrationV2CatalogItemData: { [key: string]: IIntegrationV2Testdata } = {
   guid: {
     catalogItemKeyType: 'guid',
     catalogItemKey: '628397de-d8d9-415c-a9fe-80313e5b7f47',

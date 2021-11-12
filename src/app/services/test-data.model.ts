@@ -1,4 +1,4 @@
-export interface ITestdata {
+export interface IIntegrationV2Testdata extends ITestData {
     catalogKey?: string,
     catalogItemKeyType: string,
     catalogItemKey: string,
@@ -6,3 +6,9 @@ export interface ITestdata {
     integrationKey: string,
     url?: string
 }
+
+export interface IIntegrationV1Testdata extends ITestData {
+    legacyUrlPath: string
+}
+
+export interface ITestData { }

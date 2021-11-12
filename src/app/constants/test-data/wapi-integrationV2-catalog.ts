@@ -1,6 +1,6 @@
-import { ITestdata } from "src/app/services/test-data.model";
+import { IIntegrationV2Testdata } from "src/app/services/test-data.model";
 
-export const IntegrationV2CatalogData: { [key: string]: ITestdata } = {
+export const IntegrationV2CatalogData: { [key: string]: IIntegrationV2Testdata } = {
   default: {
     catalogKey: 'ade_next',
     catalogItemKeyType: '',

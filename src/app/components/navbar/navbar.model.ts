@@ -15,6 +15,5 @@ export interface IDropdown {
     title: string,
     isCollapsed: boolean,
     btnClass: string
-    link?: string,
     items: IDropdownItem[]
 }
