@@ -40,6 +40,19 @@ const IntegrationV2ExportData = {
 
 /***/ }),
 
+/***/ "+uZs":
+/*!****************************************************************************************!*\
+  !*** ./src/app/view-logic/integrationv1-endpoint/integrationv1-endpoint.component.css ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (":host {\r\n    height: 100%\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImludGVncmF0aW9udjEtZW5kcG9pbnQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJO0FBQ0oiLCJmaWxlIjoiaW50ZWdyYXRpb252MS1lbmRwb2ludC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xyXG4gICAgaGVpZ2h0OiAxMDAlXHJcbn0iXX0= */");
+
+/***/ }),
+
 /***/ 0:
 /*!***************************!*\
   !*** multi ./src/main.ts ***!
@@ -112,9 +125,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_constants_test_data_wapi_integrationV2_export__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-export */ "+oTD");
 /* harmony import */ var src_app_constants_test_data_wapi_integrationV2_export_dialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-export-dialog */ "3EUf");
 /* harmony import */ var src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/helpers/utils */ "BGy5");
-/* harmony import */ var src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/services/endpoint.models */ "dSH7");
+/* harmony import */ var src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/view-logic/endpoint/endpoint.models */ "NlIj");
 /* harmony import */ var src_app_services_environment_model__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/services/environment.model */ "B9W6");
 /* harmony import */ var src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! src/app/services/environment.service */ "qmmW");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV1__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV1 */ "yRfF");
+/* harmony import */ var src_app_constants_config__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! src/app/constants/config */ "E+pt");
+
+
 
 
 
@@ -137,28 +154,31 @@ let EndpointNavComponent = class EndpointNavComponent {
                 title: "Katalog-Integration",
                 isCollapsed: true,
                 btnClass: "bg-light",
-                items: this.getDropdownItems(src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog)
+                items: this.getIntegrationV2DropdownItems(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog)
             },
             {
                 title: "Positions-Integration",
                 isCollapsed: true,
                 btnClass: "bg-light",
-                link: "/catalog-item-test",
-                items: this.getDropdownItems(src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].CatalogItem)
+                items: this.getIntegrationV2DropdownItems(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].CatalogItem)
             },
             {
                 title: "Export-Dialog-Integration",
                 isCollapsed: true,
                 btnClass: "bg-light",
-                link: "/export-dialog-test",
-                items: this.getDropdownItems(src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].ExportDialog)
+                items: this.getIntegrationV2DropdownItems(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].ExportDialog)
             },
             {
                 title: "Direkter Export",
                 isCollapsed: true,
                 btnClass: "bg-light",
-                link: "/direct-export-test",
-                items: this.getDropdownItems(src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].DirectExport)
+                items: this.getIntegrationV2DropdownItems(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].DirectExport)
+            },
+            {
+                title: "Integration V1",
+                isCollapsed: true,
+                btnClass: "bg-light",
+                items: this.getIntegrationV1DropdownItems()
             },
             {
                 title: "Environment",
@@ -168,8 +188,11 @@ let EndpointNavComponent = class EndpointNavComponent {
             },
         ];
         this.currentEnvironment = src_app_services_environment_model__WEBPACK_IMPORTED_MODULE_11__["Environment"].localhost;
-        this.onDropdownItemClick = (integrationType, usecase) => {
+        this.onIntegrationV2DropdownItemClick = (integrationType, usecase) => {
             this.router.navigateByUrl(`/${integrationType}/${usecase}`);
+        };
+        this.onDropdownIntegrationV1ItemClick = (integrationType) => {
+            this.router.navigateByUrl(`${src_app_constants_config__WEBPACK_IMPORTED_MODULE_14__["legacyRoutingSegment"]}/${integrationType}`);
         };
         this.onEnvironmentClick = (key) => {
             if (!key)
@@ -183,27 +206,34 @@ let EndpointNavComponent = class EndpointNavComponent {
     ngOnDestroy() {
         this.environmentSubscription.unsubscribe();
     }
-    getDropdownItems(integrationType) {
+    getIntegrationV2DropdownItems(integrationType) {
         switch (integrationType) {
-            case src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog: {
-                return this.processGetDropdownItems(src_app_constants_test_data_wapi_integrationV2_catalog__WEBPACK_IMPORTED_MODULE_5__["IntegrationV2CatalogData"], integrationType);
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog: {
+                return this.processGetIntegrationV2DropdownItems(src_app_constants_test_data_wapi_integrationV2_catalog__WEBPACK_IMPORTED_MODULE_5__["IntegrationV2CatalogData"], integrationType);
             }
-            case src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].CatalogItem: {
-                return this.processGetDropdownItems(src_app_constants_test_data_wapi_integrationV2_catalog_item__WEBPACK_IMPORTED_MODULE_6__["IntegrationV2CatalogItemData"], integrationType);
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].CatalogItem: {
+                return this.processGetIntegrationV2DropdownItems(src_app_constants_test_data_wapi_integrationV2_catalog_item__WEBPACK_IMPORTED_MODULE_6__["IntegrationV2CatalogItemData"], integrationType);
             }
-            case src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].ExportDialog: {
-                return this.processGetDropdownItems(src_app_constants_test_data_wapi_integrationV2_export_dialog__WEBPACK_IMPORTED_MODULE_8__["IntegrationV2ExportDialogData"], integrationType);
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].ExportDialog: {
+                return this.processGetIntegrationV2DropdownItems(src_app_constants_test_data_wapi_integrationV2_export_dialog__WEBPACK_IMPORTED_MODULE_8__["IntegrationV2ExportDialogData"], integrationType);
             }
-            case src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].DirectExport: {
-                return this.processGetDropdownItems(src_app_constants_test_data_wapi_integrationV2_export__WEBPACK_IMPORTED_MODULE_7__["IntegrationV2ExportData"], integrationType);
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].DirectExport: {
+                return this.processGetIntegrationV2DropdownItems(src_app_constants_test_data_wapi_integrationV2_export__WEBPACK_IMPORTED_MODULE_7__["IntegrationV2ExportData"], integrationType);
             }
         }
     }
-    processGetDropdownItems(testData, integrationType) {
+    processGetIntegrationV2DropdownItems(testData, integrationType) {
         return Object.keys(testData).map(key => ({
             key,
             title: Object(src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_9__["firstLetterToUpper"])(key),
-            onClick: (key) => { this.onDropdownItemClick(integrationType, key); }
+            onClick: (key) => { this.onIntegrationV2DropdownItemClick(integrationType, key); }
+        }));
+    }
+    getIntegrationV1DropdownItems() {
+        return Object.keys(src_app_constants_test_data_wapi_integrationV1__WEBPACK_IMPORTED_MODULE_13__["IntegrationV1Data"]).map(key => ({
+            key,
+            title: Object(src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_9__["firstLetterToUpper"])(key),
+            onClick: (key) => { this.onDropdownIntegrationV1ItemClick(key); }
         }));
     }
 };
@@ -327,17 +357,92 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "DvO3":
+/*!*******************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/view-logic/integrationv2-endpoint/integrationv2-endpoint.component.html ***!
+  \*******************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<app-endpoint [endpointVisitor]=\"integrationV2EndpointVisitor\">");
+
+/***/ }),
+
 /***/ "E+pt":
 /*!*************************************!*\
   !*** ./src/app/constants/config.ts ***!
   \*************************************/
-/*! exports provided: ApiUrlSegment */
+/*! exports provided: ApiUrlSegment, legacyRoutingSegment */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApiUrlSegment", function() { return ApiUrlSegment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "legacyRoutingSegment", function() { return legacyRoutingSegment; });
 const ApiUrlSegment = "integration/v2";
+const legacyRoutingSegment = "legacy";
+
+
+/***/ }),
+
+/***/ "FLFS":
+/*!***************************************************************************************!*\
+  !*** ./src/app/view-logic/integrationv1-endpoint/integrationv1-endpoint.component.ts ***!
+  \***************************************************************************************/
+/*! exports provided: IntegrationV1EndpointComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IntegrationV1EndpointComponent", function() { return IntegrationV1EndpointComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_integrationv1_endpoint_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./integrationv1-endpoint.component.html */ "tcgB");
+/* harmony import */ var _integrationv1_endpoint_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./integrationv1-endpoint.component.css */ "+uZs");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/view-logic/endpoint/endpoint.models */ "NlIj");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV1__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV1 */ "yRfF");
+
+
+
+
+
+
+let IntegrationV1EndpointComponent = class IntegrationV1EndpointComponent {
+    constructor() {
+        this.integrationV3EndpointVisitor = new IntegrationV3EndpointVisitor();
+    }
+    ngOnInit() {
+    }
+};
+IntegrationV1EndpointComponent.ctorParameters = () => [];
+IntegrationV1EndpointComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+        selector: 'app-integrationv1-endpoint',
+        template: _raw_loader_integrationv1_endpoint_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_integrationv1_endpoint_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+    })
+], IntegrationV1EndpointComponent);
+
+class IntegrationV3EndpointVisitor extends src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_4__["IEndpointVisitor"] {
+    getEndpoint(environment, integrationType) {
+        const testData = this.getTestData(integrationType);
+        if (!testData)
+            throw new Error(`Testdata not found for integrationtype ${integrationType}`);
+        return {
+            domain: environment.domain,
+            legacyUrlPath: testData.legacyUrlPath,
+            integrationType,
+        };
+    }
+    getTestData(integrationType) {
+        return src_app_constants_test_data_wapi_integrationV1__WEBPACK_IMPORTED_MODULE_5__["IntegrationV1Data"][integrationType];
+    }
+    getIframeSrc(endpoint) {
+        return `${endpoint.domain}/${endpoint.legacyUrlPath}`;
+    }
+}
 
 
 /***/ }),
@@ -377,7 +482,31 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"h-100 d-flex flex-column\">\r\n    <div class=\"flex-grow-1\">\r\n        URL: {{getIframeSrc(endpoint)}}\r\n    </div>\r\n    <app-iframe class=\"h-100\" *ngIf=\"getDoesIntegrationTypeRequireIframe(endpoint.integrationType); else link\"\r\n        [iframeSrc]=\"getIframeSrc(endpoint)\">\r\n    </app-iframe>\r\n    <ng-template #link>\r\n        <a [href]=\"getIframeSrc(endpoint)\">Download</a>\r\n    </ng-template>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"h-100 d-flex flex-column\">\r\n    <div [ngClass]=\"{'flex-grow-1': getDoesIntegrationTypeRequireIframe(endpoint?.integrationType)}\">\r\n        URL: {{endpointVisitor.getIframeSrc(endpoint)}}\r\n    </div>\r\n    <app-iframe class=\"h-100\" *ngIf=\"getDoesIntegrationTypeRequireIframe(endpoint?.integrationType); else link\"\r\n        [iframeSrc]=\"endpointVisitor.getIframeSrc(endpoint)\">\r\n    </app-iframe>\r\n    <ng-template #link>\r\n        <a [href]=\"endpointVisitor.getIframeSrc(endpoint)\">Download</a>\r\n    </ng-template>\r\n</div>");
+
+/***/ }),
+
+/***/ "NlIj":
+/*!********************************************************!*\
+  !*** ./src/app/view-logic/endpoint/endpoint.models.ts ***!
+  \********************************************************/
+/*! exports provided: IIntegrationType, IEndpointVisitor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IIntegrationType", function() { return IIntegrationType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IEndpointVisitor", function() { return IEndpointVisitor; });
+var IIntegrationType;
+(function (IIntegrationType) {
+    IIntegrationType["Catalog"] = "catalog";
+    IIntegrationType["CatalogItem"] = "catalogItem";
+    IIntegrationType["ExportDialog"] = "exportDialog";
+    IIntegrationType["DirectExport"] = "export";
+})(IIntegrationType || (IIntegrationType = {}));
+class IEndpointVisitor {
+}
+
 
 /***/ }),
 
@@ -398,11 +527,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "41Ph");
 /* harmony import */ var src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/services/environment.service */ "qmmW");
-/* harmony import */ var src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/services/endpoint.models */ "dSH7");
-/* harmony import */ var src_app_services_endpoint_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/services/endpoint.service */ "mnBg");
-/* harmony import */ var src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/helpers/utils */ "BGy5");
-
-
+/* harmony import */ var src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/view-logic/endpoint/endpoint.models */ "NlIj");
 
 
 
@@ -412,46 +537,29 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let EndpointComponent = class EndpointComponent {
-    constructor(environmentService, route, endpointService) {
+    constructor(environmentService, route) {
         this.environmentService = environmentService;
         this.route = route;
-        this.endpointService = endpointService;
     }
     ngOnInit() {
         const environment$ = this.environmentService.getAsObservable();
         const route$ = this.route.params;
-        this.endpointSubscription = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["combineLatest"])([environment$, route$]).subscribe(([environment, route]) => this.endpoint = this.endpointService.getEndpoint(environment, route.integrationType, route.usecase));
+        this.endpointSubscription = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["combineLatest"])([environment$, route$]).subscribe(([environment, route]) => this.endpoint = this.endpointVisitor.getEndpoint(environment, route.integrationType, route.usecase));
     }
     ngOnDestroy() {
         this.endpointSubscription.unsubscribe();
     }
-    getIframeSrc(endpoint) {
-        switch (endpoint.integrationType) {
-            case src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].Catalog:
-                return !Object(src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_9__["isNullishOrEmptyString"])(endpoint.catalogItemKeyType)
-                    ? `${endpoint.domain}/${endpoint.apiUrlSegment}/${src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].Catalog}/${endpoint.catalogKey}/${endpoint.catalogItemKeyType}/${endpoint.catalogItemKey}?integrationKey=${endpoint.integrationKey}`
-                    : !Object(src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_9__["isNullishOrEmptyString"])(endpoint.searchTerm)
-                        ? `${endpoint.domain}/${endpoint.apiUrlSegment}/${src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].Catalog}/${endpoint.catalogKey}/search?searchTerm=${endpoint.searchTerm}&integrationKey=${endpoint.integrationKey}`
-                        : `${endpoint.domain}/${endpoint.apiUrlSegment}/${src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].Catalog}/${endpoint.catalogKey}?integrationKey=${endpoint.integrationKey}`;
-            case src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].CatalogItem:
-                return `${endpoint.domain}/${endpoint.apiUrlSegment}/${src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].CatalogItem}/${endpoint.catalogItemKeyType}/${endpoint.catalogItemKey}?integrationKey=${endpoint.integrationKey}`;
-            case src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].ExportDialog:
-                return `${endpoint.domain}/${endpoint.apiUrlSegment}/${src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].ExportDialog}/${endpoint.catalogItemKeyType}/${endpoint.catalogItemKey}?integrationKey=${endpoint.integrationKey}`;
-            case src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].DirectExport:
-                return `${endpoint.domain}/${endpoint.apiUrlSegment}/${src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].DirectExport}/${endpoint.catalogItemKeyType}/${endpoint.catalogItemKey}?integrationKey=${endpoint.integrationKey}&exportFormat=${endpoint.exportFormat}`;
-            default:
-                throw new Error(`Enum argument out of range for integrationtype ${endpoint.integrationType}`);
-        }
-    }
     getDoesIntegrationTypeRequireIframe(integrationType) {
-        return [src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].Catalog, src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].CatalogItem, src_app_services_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].ExportDialog].includes(integrationType);
+        return [src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].Catalog, src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].CatalogItem, src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].ExportDialog].includes(integrationType);
     }
 };
 EndpointComponent.ctorParameters = () => [
     { type: src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_6__["EnvironmentService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
-    { type: src_app_services_endpoint_service__WEBPACK_IMPORTED_MODULE_8__["EndpointService"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] }
 ];
+EndpointComponent.propDecorators = {
+    endpointVisitor: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"] }]
+};
 EndpointComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
         selector: 'app-endpoint',
@@ -546,6 +654,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_iframe_iframe_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/iframe/iframe.component */ "xKbg");
 /* harmony import */ var _view_logic_endpoint_endpoint_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./view-logic/endpoint/endpoint.component */ "S6fu");
 /* harmony import */ var _view_logic_endpoint_nav_endpoint_nav_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./view-logic/endpoint-nav/endpoint-nav.component */ "4TER");
+/* harmony import */ var _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./view-logic/integrationv1-endpoint/integrationv1-endpoint.component */ "FLFS");
+/* harmony import */ var _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./view-logic/integrationv2-endpoint/integrationv2-endpoint.component */ "jBq7");
+
+
 
 
 
@@ -566,7 +678,7 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
             ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_6__["BsDropdownModule"].forRoot(), ngx_bootstrap_collapse__WEBPACK_IMPORTED_MODULE_7__["CollapseModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"]],
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_9__["NavbarComponent"], _components_iframe_iframe_component__WEBPACK_IMPORTED_MODULE_11__["IframeComponent"], _view_logic_endpoint_endpoint_component__WEBPACK_IMPORTED_MODULE_12__["EndpointComponent"], _view_logic_endpoint_nav_endpoint_nav_component__WEBPACK_IMPORTED_MODULE_13__["EndpointNavComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_9__["NavbarComponent"], _components_iframe_iframe_component__WEBPACK_IMPORTED_MODULE_11__["IframeComponent"], _view_logic_endpoint_endpoint_component__WEBPACK_IMPORTED_MODULE_12__["EndpointComponent"], _view_logic_endpoint_nav_endpoint_nav_component__WEBPACK_IMPORTED_MODULE_13__["EndpointNavComponent"], _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_14__["IntegrationV1EndpointComponent"], _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_15__["IntegrationV2EndpointComponent"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]],
         providers: [{ provide: _angular_common__WEBPACK_IMPORTED_MODULE_10__["APP_BASE_HREF"], useValue: '/' }]
     })
@@ -599,24 +711,16 @@ webpackEmptyAsyncContext.id = "crnd";
 
 /***/ }),
 
-/***/ "dSH7":
-/*!*********************************************!*\
-  !*** ./src/app/services/endpoint.models.ts ***!
-  \*********************************************/
-/*! exports provided: IIntegrationType */
+/***/ "gS6W":
+/*!****************************************************************************************!*\
+  !*** ./src/app/view-logic/integrationv2-endpoint/integrationv2-endpoint.component.css ***!
+  \****************************************************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IIntegrationType", function() { return IIntegrationType; });
-var IIntegrationType;
-(function (IIntegrationType) {
-    IIntegrationType["Catalog"] = "catalog";
-    IIntegrationType["CatalogItem"] = "catalogItem";
-    IIntegrationType["ExportDialog"] = "exportDialog";
-    IIntegrationType["DirectExport"] = "export";
-})(IIntegrationType || (IIntegrationType = {}));
-
+/* harmony default export */ __webpack_exports__["default"] = (":host {\r\n    height: 100%\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImludGVncmF0aW9udjItZW5kcG9pbnQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJO0FBQ0oiLCJmaWxlIjoiaW50ZWdyYXRpb252Mi1lbmRwb2ludC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xyXG4gICAgaGVpZ2h0OiAxMDAlXHJcbn0iXX0= */");
 
 /***/ }),
 
@@ -745,37 +849,28 @@ NavbarComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 /***/ }),
 
-/***/ "keim":
-/*!********************************************************!*\
-  !*** ./src/app/components/iframe/iframe.component.css ***!
-  \********************************************************/
-/*! exports provided: default */
+/***/ "jBq7":
+/*!***************************************************************************************!*\
+  !*** ./src/app/view-logic/integrationv2-endpoint/integrationv2-endpoint.component.ts ***!
+  \***************************************************************************************/
+/*! exports provided: IntegrationV2EndpointComponent, IntegrationV2EndpointVisitor */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJpZnJhbWUuY29tcG9uZW50LmNzcyJ9 */");
-
-/***/ }),
-
-/***/ "mnBg":
-/*!**********************************************!*\
-  !*** ./src/app/services/endpoint.service.ts ***!
-  \**********************************************/
-/*! exports provided: EndpointService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EndpointService", function() { return EndpointService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IntegrationV2EndpointComponent", function() { return IntegrationV2EndpointComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IntegrationV2EndpointVisitor", function() { return IntegrationV2EndpointVisitor; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _constants_test_data_wapi_integrationV2_catalog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../constants/test-data/wapi-integrationV2-catalog */ "qaMt");
-/* harmony import */ var _constants_test_data_wapi_integrationV2_catalog_item__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../constants/test-data/wapi-integrationV2-catalog-item */ "yeB7");
-/* harmony import */ var _constants_test_data_wapi_integrationV2_export__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../constants/test-data/wapi-integrationV2-export */ "+oTD");
-/* harmony import */ var _constants_test_data_wapi_integrationV2_export_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../constants/test-data/wapi-integrationV2-export-dialog */ "3EUf");
-/* harmony import */ var _endpoint_models__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./endpoint.models */ "dSH7");
-/* harmony import */ var _constants_config__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../constants/config */ "E+pt");
+/* harmony import */ var _raw_loader_integrationv2_endpoint_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./integrationv2-endpoint.component.html */ "DvO3");
+/* harmony import */ var _integrationv2_endpoint_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./integrationv2-endpoint.component.css */ "gS6W");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var src_app_constants_config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/constants/config */ "E+pt");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_catalog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-catalog */ "qaMt");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_catalog_item__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-catalog-item */ "yeB7");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_export__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-export */ "+oTD");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_export_dialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-export-dialog */ "3EUf");
+/* harmony import */ var src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/helpers/utils */ "BGy5");
+/* harmony import */ var src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/view-logic/endpoint/endpoint.models */ "NlIj");
 
 
 
@@ -784,40 +879,58 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-let EndpointService = class EndpointService {
-    constructor() { }
+
+
+
+let IntegrationV2EndpointComponent = class IntegrationV2EndpointComponent {
+    constructor() {
+        this.integrationV2EndpointVisitor = new IntegrationV2EndpointVisitor();
+    }
+    ngOnInit() {
+    }
+};
+IntegrationV2EndpointComponent.ctorParameters = () => [];
+IntegrationV2EndpointComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+        selector: 'app-integrationv2-endpoint',
+        template: _raw_loader_integrationv2_endpoint_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_integrationv2_endpoint_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+    })
+], IntegrationV2EndpointComponent);
+
+class IntegrationV2EndpointVisitor extends src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IEndpointVisitor"] {
     getEndpoint(environment, integrationType, usecase) {
         const testData = this.getTestData(integrationType, usecase);
         if (!testData)
             throw new Error(`Testdata not found for integrationtype ${integrationType} and usecase ${usecase}`);
         switch (integrationType) {
-            case _endpoint_models__WEBPACK_IMPORTED_MODULE_6__["IIntegrationType"].Catalog:
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog:
                 return {
                     domain: environment.domain,
                     integrationKey: testData.integrationKey,
-                    apiUrlSegment: _constants_config__WEBPACK_IMPORTED_MODULE_7__["ApiUrlSegment"],
+                    apiUrlSegment: src_app_constants_config__WEBPACK_IMPORTED_MODULE_4__["ApiUrlSegment"],
                     integrationType,
                     catalogKey: testData.catalogKey,
                     catalogItemKeyType: testData.catalogItemKeyType,
                     catalogItemKey: testData.catalogItemKey,
                     searchTerm: testData.searchTerm
                 };
-            case _endpoint_models__WEBPACK_IMPORTED_MODULE_6__["IIntegrationType"].CatalogItem:
-            case _endpoint_models__WEBPACK_IMPORTED_MODULE_6__["IIntegrationType"].ExportDialog: {
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].CatalogItem:
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].ExportDialog: {
                 return {
                     domain: environment.domain,
                     integrationKey: testData.integrationKey,
-                    apiUrlSegment: _constants_config__WEBPACK_IMPORTED_MODULE_7__["ApiUrlSegment"],
+                    apiUrlSegment: src_app_constants_config__WEBPACK_IMPORTED_MODULE_4__["ApiUrlSegment"],
                     integrationType,
                     catalogItemKeyType: testData.catalogItemKeyType,
                     catalogItemKey: testData.catalogItemKey
                 };
             }
-            case _endpoint_models__WEBPACK_IMPORTED_MODULE_6__["IIntegrationType"].DirectExport: {
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].DirectExport: {
                 return {
                     domain: environment.domain,
                     integrationKey: testData.integrationKey,
-                    apiUrlSegment: _constants_config__WEBPACK_IMPORTED_MODULE_7__["ApiUrlSegment"],
+                    apiUrlSegment: src_app_constants_config__WEBPACK_IMPORTED_MODULE_4__["ApiUrlSegment"],
                     integrationType,
                     catalogItemKeyType: testData.catalogItemKeyType,
                     catalogItemKey: testData.catalogItemKey,
@@ -830,27 +943,51 @@ let EndpointService = class EndpointService {
     }
     getTestData(integrationType, usecase) {
         switch (integrationType) {
-            case _endpoint_models__WEBPACK_IMPORTED_MODULE_6__["IIntegrationType"].Catalog:
-                return _constants_test_data_wapi_integrationV2_catalog__WEBPACK_IMPORTED_MODULE_2__["IntegrationV2CatalogData"][usecase];
-            case _endpoint_models__WEBPACK_IMPORTED_MODULE_6__["IIntegrationType"].CatalogItem:
-                return _constants_test_data_wapi_integrationV2_catalog_item__WEBPACK_IMPORTED_MODULE_3__["IntegrationV2CatalogItemData"][usecase];
-            case _endpoint_models__WEBPACK_IMPORTED_MODULE_6__["IIntegrationType"].ExportDialog:
-                return _constants_test_data_wapi_integrationV2_export_dialog__WEBPACK_IMPORTED_MODULE_5__["IntegrationV2ExportDialogData"][usecase];
-            case _endpoint_models__WEBPACK_IMPORTED_MODULE_6__["IIntegrationType"].DirectExport:
-                return _constants_test_data_wapi_integrationV2_export__WEBPACK_IMPORTED_MODULE_4__["IntegrationV2ExportData"][usecase];
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog:
+                return src_app_constants_test_data_wapi_integrationV2_catalog__WEBPACK_IMPORTED_MODULE_5__["IntegrationV2CatalogData"][usecase];
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].CatalogItem:
+                return src_app_constants_test_data_wapi_integrationV2_catalog_item__WEBPACK_IMPORTED_MODULE_6__["IntegrationV2CatalogItemData"][usecase];
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].ExportDialog:
+                return src_app_constants_test_data_wapi_integrationV2_export_dialog__WEBPACK_IMPORTED_MODULE_8__["IntegrationV2ExportDialogData"][usecase];
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].DirectExport:
+                return src_app_constants_test_data_wapi_integrationV2_export__WEBPACK_IMPORTED_MODULE_7__["IntegrationV2ExportData"][usecase];
             default:
                 throw new Error(`Enum argument out of range for integrationtype ${integrationType} and usecase ${usecase}`);
         }
     }
-};
-EndpointService.ctorParameters = () => [];
-EndpointService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
-    })
-], EndpointService);
+    getIframeSrc(endpoint) {
+        switch (endpoint.integrationType) {
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog:
+                return !Object(src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_9__["isNullishOrEmptyString"])(endpoint.catalogItemKeyType)
+                    ? `${endpoint.domain}/${endpoint.apiUrlSegment}/${src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog}/${endpoint.catalogKey}/${endpoint.catalogItemKeyType}/${endpoint.catalogItemKey}?integrationKey=${endpoint.integrationKey}`
+                    : !Object(src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_9__["isNullishOrEmptyString"])(endpoint.searchTerm)
+                        ? `${endpoint.domain}/${endpoint.apiUrlSegment}/${src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog}/${endpoint.catalogKey}/search?searchTerm=${endpoint.searchTerm}&integrationKey=${endpoint.integrationKey}`
+                        : `${endpoint.domain}/${endpoint.apiUrlSegment}/${src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog}/${endpoint.catalogKey}?integrationKey=${endpoint.integrationKey}`;
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].CatalogItem:
+                return `${endpoint.domain}/${endpoint.apiUrlSegment}/${src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].CatalogItem}/${endpoint.catalogItemKeyType}/${endpoint.catalogItemKey}?integrationKey=${endpoint.integrationKey}`;
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].ExportDialog:
+                return `${endpoint.domain}/${endpoint.apiUrlSegment}/${src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].ExportDialog}/${endpoint.catalogItemKeyType}/${endpoint.catalogItemKey}?integrationKey=${endpoint.integrationKey}`;
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].DirectExport:
+                return `${endpoint.domain}/${endpoint.apiUrlSegment}/${src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].DirectExport}/${endpoint.catalogItemKeyType}/${endpoint.catalogItemKey}?integrationKey=${endpoint.integrationKey}&exportFormat=${endpoint.exportFormat}`;
+            default:
+                throw new Error(`Enum argument out of range for integrationtype ${endpoint.integrationType}`);
+        }
+    }
+}
 
 
+/***/ }),
+
+/***/ "keim":
+/*!********************************************************!*\
+  !*** ./src/app/components/iframe/iframe.component.css ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJpZnJhbWUuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -971,6 +1108,19 @@ EnvironmentService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 /***/ }),
 
+/***/ "tcgB":
+/*!*******************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/view-logic/integrationv1-endpoint/integrationv1-endpoint.component.html ***!
+  \*******************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<app-endpoint [endpointVisitor]=\"integrationV3EndpointVisitor\">");
+
+/***/ }),
+
 /***/ "vY5A":
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
@@ -984,9 +1134,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "tyNb");
-/* harmony import */ var _services_endpoint_models__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services/endpoint.models */ "dSH7");
+/* harmony import */ var _view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./view-logic/endpoint/endpoint.models */ "NlIj");
 /* harmony import */ var _services_usecase_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./services/usecase.model */ "AdMs");
-/* harmony import */ var _view_logic_endpoint_endpoint_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./view-logic/endpoint/endpoint.component */ "S6fu");
+/* harmony import */ var _constants_config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants/config */ "E+pt");
+/* harmony import */ var _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./view-logic/integrationv1-endpoint/integrationv1-endpoint.component */ "FLFS");
+/* harmony import */ var _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./view-logic/integrationv2-endpoint/integrationv2-endpoint.component */ "jBq7");
+
+
 
 
 
@@ -994,9 +1148,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: ':integrationType/:usecase', component: _view_logic_endpoint_endpoint_component__WEBPACK_IMPORTED_MODULE_5__["EndpointComponent"] },
-    { path: '', redirectTo: `${_services_endpoint_models__WEBPACK_IMPORTED_MODULE_3__["IIntegrationType"].Catalog}/${_services_usecase_model__WEBPACK_IMPORTED_MODULE_4__["IUsecase"].Default}`, pathMatch: 'full' },
-    { path: '**', redirectTo: `${_services_endpoint_models__WEBPACK_IMPORTED_MODULE_3__["IIntegrationType"].Catalog}/${_services_usecase_model__WEBPACK_IMPORTED_MODULE_4__["IUsecase"].Default}` }
+    { path: `${_constants_config__WEBPACK_IMPORTED_MODULE_5__["legacyRoutingSegment"]}/:integrationType`, component: _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_6__["IntegrationV1EndpointComponent"] },
+    { path: ':integrationType/:usecase', component: _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_7__["IntegrationV2EndpointComponent"] },
+    { path: '', redirectTo: `${_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_3__["IIntegrationType"].Catalog}/${_services_usecase_model__WEBPACK_IMPORTED_MODULE_4__["IUsecase"].Default}`, pathMatch: 'full' },
+    { path: '**', redirectTo: `${_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_3__["IIntegrationType"].Catalog}/${_services_usecase_model__WEBPACK_IMPORTED_MODULE_4__["IUsecase"].Default}` }
 ];
 // configures NgModule imports and exports
 let AppRoutingModule = class AppRoutingModule {
@@ -1056,6 +1211,34 @@ IframeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     })
 ], IframeComponent);
 
+
+
+/***/ }),
+
+/***/ "yRfF":
+/*!***********************************************************!*\
+  !*** ./src/app/constants/test-data/wapi-integrationV1.ts ***!
+  \***********************************************************/
+/*! exports provided: IntegrationV1Data */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IntegrationV1Data", function() { return IntegrationV1Data; });
+const IntegrationV1Data = {
+    catalog: {
+        legacyUrlPath: 'search.php?tb=hilti&searchitem=beton&searchopt=0&ade=0&viewMode=0'
+    },
+    catalogItem: {
+        legacyUrlPath: 'online/usr/show.php?tb=imi&ids=10,27&key=id&fmt=html'
+    },
+    exportDialog: {
+        legacyUrlPath: 'online/usr/export.php?tblst=gessler,LH1E&key=anr&fmt=pdf&target=email'
+    },
+    export: {
+        legacyUrlPath: 'online/usr/export.php?tblst=bruns_obst,1154,686&key=id&mode=silent&target=file&fmt=pdf'
+    },
+};
 
 
 /***/ }),
