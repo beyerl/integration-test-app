@@ -54,28 +54,24 @@
 
       var IntegrationV2ExportData = {
         guid: {
-          catalogItemKeyType: 'guid',
-          catalogItemKey: '628397de-d8d9-415c-a9fe-80313e5b7f47',
-          integrationKey: 'CC86E7CE-7E4D-45FE-A098-A58EF95F321E',
-          url: 'https://localhost:44900/integration/v2/export/guid/628397de-d8d9-415c-a9fe-80313e5b7f47?exportFormat=101&integrationKey=CC86E7CE-7E4D-45FE-A098-A58EF95F321E'
+          "catalogItemKeyType": "guid",
+          "catalogItemKey": "ED70588A-617E-4F24-9214-0EEC52949764",
+          "integrationKey": "6A44BF70-AA8C-4D37-BD63-AB99A01B65F5"
         },
         legacyPositionId: {
-          catalogItemKeyType: 'legacyPositionId',
-          catalogItemKey: '8',
-          integrationKey: 'CC86E7CE-7E4D-45FE-A098-A58EF95F321E',
-          url: 'https://localhost:44900/integration/v2/export/legacyPositionId/8?exportFormat=101&integrationKey=CC86E7CE-7E4D-45FE-A098-A58EF95F321E'
+          "catalogItemKeyType": "legacyPositionId",
+          "catalogItemKey": "10",
+          "integrationKey": "6A44BF70-AA8C-4D37-BD63-AB99A01B65F5"
         },
         refnr: {
-          catalogItemKeyType: 'refnr',
-          catalogItemKey: 'CDD4FA66AFAE3477D4B17F8F29760E0D',
-          integrationKey: '9d8d2f25-635b-4293-b23e-56354510ad53',
-          url: 'https://localhost:44900/integration/v2/export/refnr/CDD4FA66AFAE3477D4B17F8F29760E0D?exportFormat=101&integrationKey=9d8d2f25-635b-4293-b23e-56354510ad53'
+          "catalogItemKeyType": "refnr",
+          "catalogItemKey": "1",
+          "integrationKey": "6A44BF70-AA8C-4D37-BD63-AB99A01B65F5"
         },
         anr: {
-          catalogItemKeyType: 'anr',
-          catalogItemKey: '70005278',
-          integrationKey: '2BA562E7-997D-4346-A8F8-FC30C47071EB',
-          url: 'https://localhost:44900/integration/v2/export/anr/70005278?exportFormat=101&integrationKey=2BA562E7-997D-4346-A8F8-FC30C47071EB'
+          "catalogItemKeyType": "anr",
+          "catalogItemKey": "1234",
+          "integrationKey": "6A44BF70-AA8C-4D37-BD63-AB99A01B65F5"
         }
       };
       /***/
@@ -140,27 +136,23 @@
       var IntegrationV2ExportDialogData = {
         guid: {
           "catalogItemKeyType": "guid",
-          "catalogItemKey": "628397de-d8d9-415c-a9fe-80313e5b7f47",
-          "integrationKey": "4D95054B-5A73-4FF5-B3E0-F521471CA664",
-          "url": "https://localhost:44900/integration/v2/exportDialog/guid/628397de-d8d9-415c-a9fe-80313e5b7f47?integrationKey=4D95054B-5A73-4FF5-B3E0-F521471CA664"
+          "catalogItemKey": "ED70588A-617E-4F24-9214-0EEC52949764",
+          "integrationKey": "2D9CCEE9-E078-4088-8430-8423DABBEFEE"
         },
         legacyPositionId: {
           "catalogItemKeyType": "legacyPositionId",
-          "catalogItemKey": "8",
-          "integrationKey": "4D95054B-5A73-4FF5-B3E0-F521471CA664",
-          "url": "https://localhost:44900/integration/v2/exportDialog/legacyPositionId/8?integrationKey=4D95054B-5A73-4FF5-B3E0-F521471CA664"
+          "catalogItemKey": "10",
+          "integrationKey": "2D9CCEE9-E078-4088-8430-8423DABBEFEE"
         },
         refnr: {
           "catalogItemKeyType": "refnr",
-          "catalogItemKey": "CDD4FA66AFAE3477D4B17F8F29760E0D",
-          "integrationKey": "6EF97EE5-F330-411B-949A-CB039464F15A",
-          "url": "https://localhost:44900/integration/v2/exportDialog/refnr/CDD4FA66AFAE3477D4B17F8F29760E0D?integrationKey=6EF97EE5-F330-411B-949A-CB039464F15A"
+          "catalogItemKey": "1",
+          "integrationKey": "2D9CCEE9-E078-4088-8430-8423DABBEFEE"
         },
         anr: {
           "catalogItemKeyType": "anr",
-          "catalogItemKey": "70005278",
-          "integrationKey": "5d38d4cb-7c7f-40b2-856e-afdd0ab1f687",
-          "url": "https://localhost:44900/integration/v2/exportDialog/anr/70005278?integrationKey=5d38d4cb-7c7f-40b2-856e-afdd0ab1f687"
+          "catalogItemKey": "1234",
+          "integrationKey": "2D9CCEE9-E078-4088-8430-8423DABBEFEE"
         }
       };
       /***/
@@ -520,10 +512,6 @@
         qs: {
           title: "Qs",
           domain: "https://qs.ade.adesystem.net"
-        },
-        prod: {
-          title: "Prod",
-          domain: "https://beta.ausschreiben.de"
         }
       };
       /***/
@@ -1742,52 +1730,46 @@
 
       var IntegrationV2CatalogData = {
         "default": {
-          catalogKey: 'ade_next',
+          catalogKey: 'integration-app',
           catalogItemKeyType: '',
           catalogItemKey: '',
           searchTerm: '',
-          integrationKey: '0B591F54-0BB6-44EF-8BAB-D94DC184C548',
-          url: 'https://localhost:44900/integration/v2/catalog/ade_next?integrationKey=0B591F54-0BB6-44EF-8BAB-D94DC184C548'
+          integrationKey: 'EF810BF6-A81D-46DD-8DB5-0A8EE529834D'
         },
         search: {
-          catalogKey: 'ade_next',
+          catalogKey: 'integration-app',
           catalogItemKeyType: '',
           catalogItemKey: '',
-          searchTerm: 'FENSTER',
-          integrationKey: '0B591F54-0BB6-44EF-8BAB-D94DC184C548',
-          url: 'https://localhost:44900/integration/v2/catalog/ade_next/search?searchTerm=FENSTER&integrationKey=0B591F54-0BB6-44EF-8BAB-D94DC184C548'
+          searchTerm: 'Schallabsorber',
+          integrationKey: 'EBC0F440-151B-4E89-8549-3B8E3881F1FF'
         },
         guid: {
-          catalogKey: 'ade_next',
+          catalogKey: 'integration-app',
           catalogItemKeyType: 'guid',
-          catalogItemKey: '628397de-d8d9-415c-a9fe-80313e5b7f47',
+          catalogItemKey: 'ed70588a-617e-4f24-9214-0eec52949764',
           searchTerm: '',
-          integrationKey: '0B591F54-0BB6-44EF-8BAB-D94DC184C548',
-          url: 'https://localhost:44900/integration/v2/catalog/ade_next/guid/628397de-d8d9-415c-a9fe-80313e5b7f47?integrationKey=0B591F54-0BB6-44EF-8BAB-D94DC184C548'
+          integrationKey: '7EB839FF-5C9B-4D2D-A4A3-CFBD153E047D'
         },
         legacyPositionId: {
-          catalogKey: 'ade_next',
+          catalogKey: 'integration-app',
           catalogItemKeyType: 'legacyPositionId',
-          catalogItemKey: '8',
+          catalogItemKey: '10',
           searchTerm: '',
-          integrationKey: '0B591F54-0BB6-44EF-8BAB-D94DC184C548',
-          url: 'https://localhost:44900/integration/v2/catalog/ade_next/legacyPositionId/8?integrationKey=0B591F54-0BB6-44EF-8BAB-D94DC184C548'
+          integrationKey: '7EB839FF-5C9B-4D2D-A4A3-CFBD153E047D'
         },
         refnr: {
-          catalogKey: 'lignatur',
+          catalogKey: 'integration-app',
           catalogItemKeyType: 'refnr',
-          catalogItemKey: 'CDD4FA66AFAE3477D4B17F8F29760E0D',
+          catalogItemKey: '1',
           searchTerm: '',
-          integrationKey: 'bcbbb642-9404-456a-9c12-711f39d8b3ff',
-          url: 'https://localhost:44900/integration/v2/catalog/lignatur/refnr/CDD4FA66AFAE3477D4B17F8F29760E0D?integrationKey=bcbbb642-9404-456a-9c12-711f39d8b3ff'
+          integrationKey: '7EB839FF-5C9B-4D2D-A4A3-CFBD153E047D'
         },
         anr: {
-          catalogKey: 'cleanroom',
+          catalogKey: 'integration-app',
           catalogItemKeyType: 'anr',
-          catalogItemKey: '70005278',
+          catalogItemKey: '1234',
           searchTerm: '',
-          integrationKey: 'BEA6CB45-D64B-4758-BE58-713A3C21C88C',
-          url: 'https://localhost:44900/integration/v2/catalog/cleanroom/anr/70005278?integrationKey=BEA6CB45-D64B-4758-BE58-713A3C21C88C'
+          integrationKey: '7EB839FF-5C9B-4D2D-A4A3-CFBD153E047D'
         }
       };
       /***/
@@ -2151,28 +2133,24 @@
 
       var IntegrationV2CatalogItemData = {
         guid: {
-          catalogItemKeyType: 'guid',
-          catalogItemKey: '628397de-d8d9-415c-a9fe-80313e5b7f47',
-          integrationKey: '0B591F54-0BB6-44EF-8BAB-D94DC184C548',
-          url: 'https://localhost:44900/integration/v2/catalogItem/guid/628397de-d8d9-415c-a9fe-80313e5b7f47?integrationKey=0B591F54-0BB6-44EF-8BAB-D94DC184C548'
+          "catalogItemKeyType": "guid",
+          "catalogItemKey": "ED70588A-617E-4F24-9214-0EEC52949764",
+          "integrationKey": "BE6C0DE4-166C-4F52-974F-B7E165E2FF6C"
         },
         legacyPositionId: {
-          catalogItemKeyType: 'legacyPositionId',
-          catalogItemKey: '8',
-          integrationKey: '0B591F54-0BB6-44EF-8BAB-D94DC184C548',
-          url: 'https://localhost:44900/integration/v2/catalogItem/legacyPositionId/8?integrationKey=DFA008BB-E1C9-4E0B-A5E9-48F78853D7A1'
+          "catalogItemKeyType": "legacyPositionId",
+          "catalogItemKey": "10",
+          "integrationKey": "BE6C0DE4-166C-4F52-974F-B7E165E2FF6C"
         },
         refnr: {
-          catalogItemKeyType: 'refnr',
-          catalogItemKey: 'CDD4FA66AFAE3477D4B17F8F29760E0D',
-          integrationKey: '50747C95-F939-401D-B8A2-C04E2F7D0E65',
-          url: 'https://localhost:44900/integration/v2/catalogItem/refnr/CDD4FA66AFAE3477D4B17F8F29760E0D?integrationKey=50747C95-F939-401D-B8A2-C04E2F7D0E65'
+          "catalogItemKeyType": "refnr",
+          "catalogItemKey": "1",
+          "integrationKey": "BE6C0DE4-166C-4F52-974F-B7E165E2FF6C"
         },
         anr: {
-          catalogItemKeyType: 'anr',
-          catalogItemKey: '70005278',
-          integrationKey: 'BEA6CB45-D64B-4758-BE58-713A3C21C88C',
-          url: 'https://localhost:44900/integration/v2/catalogItem/anr/70005278?integrationKey=BEA6CB45-D64B-4758-BE58-713A3C21C88C'
+          "catalogItemKeyType": "anr",
+          "catalogItemKey": "1234",
+          "integrationKey": "BE6C0DE4-166C-4F52-974F-B7E165E2FF6C"
         }
       };
       /***/
