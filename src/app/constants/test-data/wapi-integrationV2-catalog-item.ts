@@ -2,29 +2,25 @@ import { IIntegrationV2Testdata } from "src/app/services/test-data.model";
 
 export const IntegrationV2CatalogItemData: { [key: string]: IIntegrationV2Testdata } = {
   guid: {
-    catalogItemKeyType: 'guid',
-    catalogItemKey: '628397de-d8d9-415c-a9fe-80313e5b7f47',
-    integrationKey: '0B591F54-0BB6-44EF-8BAB-D94DC184C548',
-    url: 'https://localhost:44900/integration/v2/catalogItem/guid/628397de-d8d9-415c-a9fe-80313e5b7f47?integrationKey=0B591F54-0BB6-44EF-8BAB-D94DC184C548',
+    "catalogItemKeyType": "guid",
+    "catalogItemKey": "ED70588A-617E-4F24-9214-0EEC52949764",
+    "integrationKey": "BE6C0DE4-166C-4F52-974F-B7E165E2FF6C",
   },
   legacyPositionId: {
-    catalogItemKeyType: 'legacyPositionId',
-    catalogItemKey: '8',
-    integrationKey: '0B591F54-0BB6-44EF-8BAB-D94DC184C548',
-    url: 'https://localhost:44900/integration/v2/catalogItem/legacyPositionId/8?integrationKey=DFA008BB-E1C9-4E0B-A5E9-48F78853D7A1',
+    "catalogItemKeyType": "legacyPositionId",
+    "catalogItemKey": "10",
+    "integrationKey": "BE6C0DE4-166C-4F52-974F-B7E165E2FF6C",
   },
   refnr: {
-    catalogItemKeyType: 'refnr',
-    catalogItemKey: 'CDD4FA66AFAE3477D4B17F8F29760E0D',
-    integrationKey: '50747C95-F939-401D-B8A2-C04E2F7D0E65',
-    url: 'https://localhost:44900/integration/v2/catalogItem/refnr/CDD4FA66AFAE3477D4B17F8F29760E0D?integrationKey=50747C95-F939-401D-B8A2-C04E2F7D0E65',
+    "catalogItemKeyType": "refnr",
+    "catalogItemKey": "1",
+    "integrationKey": "BE6C0DE4-166C-4F52-974F-B7E165E2FF6C",
   },
   anr: {
-    catalogItemKeyType: 'anr',
-    catalogItemKey: '70005278',
-    integrationKey: 'BEA6CB45-D64B-4758-BE58-713A3C21C88C',
-    url: 'https://localhost:44900/integration/v2/catalogItem/anr/70005278?integrationKey=BEA6CB45-D64B-4758-BE58-713A3C21C88C',
-  },
+    "catalogItemKeyType": "anr",
+    "catalogItemKey": "1234",
+    "integrationKey": "BE6C0DE4-166C-4F52-974F-B7E165E2FF6C",
+  }
 }
 
 

@@ -4,7 +4,6 @@ export interface IIntegrationV2Testdata extends ITestData {
     catalogItemKey: string,
     searchTerm?: string,
     integrationKey: string,
-    url?: string
 }
 
 export interface IIntegrationV1Testdata extends ITestData {
