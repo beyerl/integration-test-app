@@ -5,6 +5,7 @@ import { EnvironmentService } from 'src/app/services/environment.service';
 import { IEndpoint, IEndpointVisitor, IIntegrationType } from 'src/app/view-logic/endpoint/endpoint.models';
 import { IEnvironment } from 'src/app/services/environment.model';
 import { IUsecase } from 'src/app/services/usecase.model';
+import { isNgTemplate } from '@angular/compiler';
 
 @Component({
   selector: 'app-endpoint',
@@ -38,6 +39,11 @@ export class EndpointComponent implements OnInit, OnDestroy {
   }
 
   getDoesIntegrationTypeRequireIframe(integrationType: IIntegrationType) {
-    return [IIntegrationType.Catalog, IIntegrationType.CatalogItem, IIntegrationType.ExportDialog].includes(integrationType)
+    for (let item of [IIntegrationType.Catalog, IIntegrationType.CatalogItem, IIntegrationType.ExportDialog]) {
+      if (item === integrationType) {
+        return true
+      }
+    }
+    return false
   }
 }

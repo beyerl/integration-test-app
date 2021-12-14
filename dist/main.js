@@ -560,7 +560,23 @@ var EndpointComponent = /** @class */ (function () {
         this.endpointSubscription.unsubscribe();
     };
     EndpointComponent.prototype.getDoesIntegrationTypeRequireIframe = function (integrationType) {
-        return [src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].Catalog, src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].CatalogItem, src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].ExportDialog].includes(integrationType);
+        var e_1, _a;
+        try {
+            for (var _b = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__values"])([src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].Catalog, src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].CatalogItem, src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].ExportDialog]), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var item = _c.value;
+                if (item === integrationType) {
+                    return true;
+                }
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        return false;
     };
     EndpointComponent.ctorParameters = function () { return [
         { type: src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_6__["EnvironmentService"] },
