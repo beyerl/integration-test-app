@@ -1,11 +1,11 @@
 <div class="h-100 d-flex flex-column">
-    <div [ngClass]="{'flex-grow-1': getDoesIntegrationTypeRequireIframe(endpoint?.integrationType)}">
-        URL: {{endpointVisitor.getIframeSrc(endpoint)}}
+    <div class="form-group p-2" [ngClass]="{'flex-grow-1': getDoesIntegrationTypeRequireIframe(endpoint?.integrationType)}">
+        <label for="url">URL: </label>
+        <input type="text" id="url" class="form-control" [(ngModel)]="iFrameSrc" />
     </div>
-    <app-iframe class="h-100" *ngIf="getDoesIntegrationTypeRequireIframe(endpoint?.integrationType); else link"
-        [iframeSrc]="endpointVisitor.getIframeSrc(endpoint)">
+    <app-iframe class="h-100" *ngIf="getDoesIntegrationTypeRequireIframe(endpoint?.integrationType); else link" [iframeSrc]="iFrameSrc">
     </app-iframe>
     <ng-template #link>
-        <a [href]="endpointVisitor.getIframeSrc(endpoint)">Download</a>
+        <a [href]="iFrameSrc">Download</a>
     </ng-template>
 </div>

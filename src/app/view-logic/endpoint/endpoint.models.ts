@@ -25,5 +25,5 @@ export enum IIntegrationType {
 export abstract class IEndpointVisitor {
     public abstract getEndpoint(environment: IEnvironment, integrationType: IIntegrationType, usecase: IUsecase): IEndpoint
     protected abstract getTestData(integrationType: IIntegrationType, usecase?: IUsecase): ITestData
-    public abstract getIframeSrc(endpoint: IEndpoint)
+    public abstract getIframeSrc(endpoint: IEndpoint): string
 }

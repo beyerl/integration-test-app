@@ -17,6 +17,7 @@ export class EndpointComponent implements OnInit, OnDestroy {
   endpointSubscription: Subscription
 
   endPoint: IEndpoint
+  iFrameSrc: string
 
   @Input() endpointVisitor: IEndpointVisitor
 
@@ -30,7 +31,11 @@ export class EndpointComponent implements OnInit, OnDestroy {
     const route$ = this.route.params
 
     this.endpointSubscription = combineLatest([environment$, route$]).subscribe(
-      ([environment, route]) => this.endpoint = this.endpointVisitor.getEndpoint(environment, route.integrationType, route.usecase)
+      ([environment, route]) => {
+        const endpoint = this.endpointVisitor.getEndpoint(environment, route.integrationType, route.usecase)
+        this.endpoint = endpoint
+        this.iFrameSrc = this.endpointVisitor.getIframeSrc(endpoint)
+      }
     )
   }
 
