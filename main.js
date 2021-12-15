@@ -107,22 +107,29 @@ var IntegrationV2ExportDialogData = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EndpointNavComponent", function() { return EndpointNavComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _raw_loader_endpoint_nav_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./endpoint-nav.component.html */ "I6gM");
-/* harmony import */ var _endpoint_nav_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./endpoint-nav.component.css */ "C7LK");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "tyNb");
-/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_catalog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-catalog */ "qaMt");
-/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_catalog_item__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-catalog-item */ "yeB7");
-/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_export__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-export */ "+oTD");
-/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_export_dialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-export-dialog */ "3EUf");
-/* harmony import */ var src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/helpers/utils */ "BGy5");
-/* harmony import */ var src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/view-logic/endpoint/endpoint.models */ "NlIj");
-/* harmony import */ var src_app_services_environment_model__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/services/environment.model */ "B9W6");
-/* harmony import */ var src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! src/app/services/environment.service */ "qmmW");
-/* harmony import */ var src_app_constants_test_data_wapi_integrationV1__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV1 */ "yRfF");
-/* harmony import */ var src_app_constants_config__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! src/app/constants/config */ "E+pt");
-
+/* harmony import */ var _raw_loader_endpoint_nav_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./endpoint-nav.component.html */ "I6gM");
+/* harmony import */ var _endpoint_nav_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./endpoint-nav.component.css */ "C7LK");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_catalog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-catalog */ "qaMt");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_catalog_item__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-catalog-item */ "yeB7");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_export__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-export */ "+oTD");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_export_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-export-dialog */ "3EUf");
+/* harmony import */ var src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/helpers/utils */ "BGy5");
+/* harmony import */ var src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/view-logic/endpoint/endpoint.models */ "NlIj");
+/* harmony import */ var src_app_services_environment_model__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/services/environment.model */ "B9W6");
+/* harmony import */ var src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/services/environment.service */ "qmmW");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV1__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV1 */ "yRfF");
+/* harmony import */ var src_app_constants_config__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! src/app/constants/config */ "E+pt");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 
 
@@ -147,25 +154,25 @@ var EndpointNavComponent = /** @class */ (function () {
                 title: "Katalog-Integration",
                 isCollapsed: true,
                 btnClass: "bg-light",
-                items: this.getIntegrationV2DropdownItems(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog)
+                items: this.getIntegrationV2DropdownItems(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].Catalog)
             },
             {
                 title: "Positions-Integration",
                 isCollapsed: true,
                 btnClass: "bg-light",
-                items: this.getIntegrationV2DropdownItems(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].CatalogItem)
+                items: this.getIntegrationV2DropdownItems(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].CatalogItem)
             },
             {
                 title: "Export-Dialog-Integration",
                 isCollapsed: true,
                 btnClass: "bg-light",
-                items: this.getIntegrationV2DropdownItems(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].ExportDialog)
+                items: this.getIntegrationV2DropdownItems(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].ExportDialog)
             },
             {
                 title: "Direkter Export",
                 isCollapsed: true,
                 btnClass: "bg-light",
-                items: this.getIntegrationV2DropdownItems(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].DirectExport)
+                items: this.getIntegrationV2DropdownItems(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].DirectExport)
             },
             {
                 title: "Integration V1",
@@ -177,20 +184,20 @@ var EndpointNavComponent = /** @class */ (function () {
                 title: "Environment",
                 isCollapsed: true,
                 btnClass: "bg-primary",
-                items: Object.keys(src_app_services_environment_model__WEBPACK_IMPORTED_MODULE_11__["Environment"]).map(function (key) { return ({ key: key, title: src_app_services_environment_model__WEBPACK_IMPORTED_MODULE_11__["Environment"][key].title, onClick: function (key) { return _this.onEnvironmentClick(key); } }); })
+                items: Object.keys(src_app_services_environment_model__WEBPACK_IMPORTED_MODULE_10__["Environment"]).map(function (key) { return ({ key: key, title: src_app_services_environment_model__WEBPACK_IMPORTED_MODULE_10__["Environment"][key].title, onClick: function (key) { return _this.onEnvironmentClick(key); } }); })
             },
         ];
-        this.currentEnvironment = src_app_services_environment_model__WEBPACK_IMPORTED_MODULE_11__["Environment"].localhost;
+        this.currentEnvironment = src_app_services_environment_model__WEBPACK_IMPORTED_MODULE_10__["Environment"].localhost;
         this.onIntegrationV2DropdownItemClick = function (integrationType, usecase) {
             _this.router.navigateByUrl("/" + integrationType + "/" + usecase);
         };
         this.onDropdownIntegrationV1ItemClick = function (integrationType) {
-            _this.router.navigateByUrl(src_app_constants_config__WEBPACK_IMPORTED_MODULE_14__["legacyRoutingSegment"] + "/" + integrationType);
+            _this.router.navigateByUrl(src_app_constants_config__WEBPACK_IMPORTED_MODULE_13__["legacyRoutingSegment"] + "/" + integrationType);
         };
         this.onEnvironmentClick = function (key) {
             if (!key)
                 return;
-            _this.environmentService.set(src_app_services_environment_model__WEBPACK_IMPORTED_MODULE_11__["Environment"][key]);
+            _this.environmentService.set(src_app_services_environment_model__WEBPACK_IMPORTED_MODULE_10__["Environment"][key]);
         };
     }
     EndpointNavComponent.prototype.ngOnInit = function () {
@@ -202,17 +209,17 @@ var EndpointNavComponent = /** @class */ (function () {
     };
     EndpointNavComponent.prototype.getIntegrationV2DropdownItems = function (integrationType) {
         switch (integrationType) {
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog: {
-                return this.processGetIntegrationV2DropdownItems(src_app_constants_test_data_wapi_integrationV2_catalog__WEBPACK_IMPORTED_MODULE_5__["IntegrationV2CatalogData"], integrationType);
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].Catalog: {
+                return this.processGetIntegrationV2DropdownItems(src_app_constants_test_data_wapi_integrationV2_catalog__WEBPACK_IMPORTED_MODULE_4__["IntegrationV2CatalogData"], integrationType);
             }
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].CatalogItem: {
-                return this.processGetIntegrationV2DropdownItems(src_app_constants_test_data_wapi_integrationV2_catalog_item__WEBPACK_IMPORTED_MODULE_6__["IntegrationV2CatalogItemData"], integrationType);
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].CatalogItem: {
+                return this.processGetIntegrationV2DropdownItems(src_app_constants_test_data_wapi_integrationV2_catalog_item__WEBPACK_IMPORTED_MODULE_5__["IntegrationV2CatalogItemData"], integrationType);
             }
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].ExportDialog: {
-                return this.processGetIntegrationV2DropdownItems(src_app_constants_test_data_wapi_integrationV2_export_dialog__WEBPACK_IMPORTED_MODULE_8__["IntegrationV2ExportDialogData"], integrationType);
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].ExportDialog: {
+                return this.processGetIntegrationV2DropdownItems(src_app_constants_test_data_wapi_integrationV2_export_dialog__WEBPACK_IMPORTED_MODULE_7__["IntegrationV2ExportDialogData"], integrationType);
             }
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].DirectExport: {
-                return this.processGetIntegrationV2DropdownItems(src_app_constants_test_data_wapi_integrationV2_export__WEBPACK_IMPORTED_MODULE_7__["IntegrationV2ExportData"], integrationType);
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].DirectExport: {
+                return this.processGetIntegrationV2DropdownItems(src_app_constants_test_data_wapi_integrationV2_export__WEBPACK_IMPORTED_MODULE_6__["IntegrationV2ExportData"], integrationType);
             }
         }
     };
@@ -220,28 +227,30 @@ var EndpointNavComponent = /** @class */ (function () {
         var _this = this;
         return Object.keys(testData).map(function (key) { return ({
             key: key,
-            title: Object(src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_9__["firstLetterToUpper"])(key),
+            title: Object(src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_8__["firstLetterToUpper"])(key),
             onClick: function (key) { _this.onIntegrationV2DropdownItemClick(integrationType, key); }
         }); });
     };
     EndpointNavComponent.prototype.getIntegrationV1DropdownItems = function () {
         var _this = this;
-        return Object.keys(src_app_constants_test_data_wapi_integrationV1__WEBPACK_IMPORTED_MODULE_13__["IntegrationV1Data"]).map(function (key) { return ({
+        return Object.keys(src_app_constants_test_data_wapi_integrationV1__WEBPACK_IMPORTED_MODULE_12__["IntegrationV1Data"]).map(function (key) { return ({
             key: key,
-            title: Object(src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_9__["firstLetterToUpper"])(key),
+            title: Object(src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_8__["firstLetterToUpper"])(key),
             onClick: function (key) { _this.onDropdownIntegrationV1ItemClick(key); }
         }); });
     };
     EndpointNavComponent.ctorParameters = function () { return [
-        { type: src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_12__["EnvironmentService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+        { type: src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_11__["EnvironmentService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
     ]; };
-    EndpointNavComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+    EndpointNavComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'app-endpoint-nav',
-            template: _raw_loader_endpoint_nav_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-            styles: [_endpoint_nav_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
-        })
+            template: _raw_loader_endpoint_nav_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+            styles: [_endpoint_nav_component_css__WEBPACK_IMPORTED_MODULE_1__["default"]]
+        }),
+        __metadata("design:paramtypes", [src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_11__["EnvironmentService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], EndpointNavComponent);
     return EndpointNavComponent;
 }());
@@ -393,13 +402,35 @@ var legacyRoutingSegment = "legacy";
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IntegrationV1EndpointComponent", function() { return IntegrationV1EndpointComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _raw_loader_integrationv1_endpoint_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./integrationv1-endpoint.component.html */ "tcgB");
-/* harmony import */ var _integrationv1_endpoint_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./integrationv1-endpoint.component.css */ "+uZs");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/view-logic/endpoint/endpoint.models */ "NlIj");
-/* harmony import */ var src_app_constants_test_data_wapi_integrationV1__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV1 */ "yRfF");
-
+/* harmony import */ var _raw_loader_integrationv1_endpoint_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./integrationv1-endpoint.component.html */ "tcgB");
+/* harmony import */ var _integrationv1_endpoint_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./integrationv1-endpoint.component.css */ "+uZs");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/view-logic/endpoint/endpoint.models */ "NlIj");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV1__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV1 */ "yRfF");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 
 
@@ -412,18 +443,19 @@ var IntegrationV1EndpointComponent = /** @class */ (function () {
     IntegrationV1EndpointComponent.prototype.ngOnInit = function () {
     };
     IntegrationV1EndpointComponent.ctorParameters = function () { return []; };
-    IntegrationV1EndpointComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+    IntegrationV1EndpointComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'app-integrationv1-endpoint',
-            template: _raw_loader_integrationv1_endpoint_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-            styles: [_integrationv1_endpoint_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
-        })
+            template: _raw_loader_integrationv1_endpoint_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+            styles: [_integrationv1_endpoint_component_css__WEBPACK_IMPORTED_MODULE_1__["default"]]
+        }),
+        __metadata("design:paramtypes", [])
     ], IntegrationV1EndpointComponent);
     return IntegrationV1EndpointComponent;
 }());
 
 var IntegrationV3EndpointVisitor = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(IntegrationV3EndpointVisitor, _super);
+    __extends(IntegrationV3EndpointVisitor, _super);
     function IntegrationV3EndpointVisitor() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -438,13 +470,13 @@ var IntegrationV3EndpointVisitor = /** @class */ (function (_super) {
         };
     };
     IntegrationV3EndpointVisitor.prototype.getTestData = function (integrationType) {
-        return src_app_constants_test_data_wapi_integrationV1__WEBPACK_IMPORTED_MODULE_5__["IntegrationV1Data"][integrationType];
+        return src_app_constants_test_data_wapi_integrationV1__WEBPACK_IMPORTED_MODULE_4__["IntegrationV1Data"][integrationType];
     };
     IntegrationV3EndpointVisitor.prototype.getIframeSrc = function (endpoint) {
         return endpoint.domain + "/" + endpoint.legacyUrlPath;
     };
     return IntegrationV3EndpointVisitor;
-}(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_4__["IEndpointVisitor"]));
+}(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_3__["IEndpointVisitor"]));
 
 
 /***/ }),
@@ -484,7 +516,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"h-100 d-flex flex-column\">\r\n    <div [ngClass]=\"{'flex-grow-1': getDoesIntegrationTypeRequireIframe(endpoint?.integrationType)}\">\r\n        URL: {{endpointVisitor.getIframeSrc(endpoint)}}\r\n    </div>\r\n    <app-iframe class=\"h-100\" *ngIf=\"getDoesIntegrationTypeRequireIframe(endpoint?.integrationType); else link\"\r\n        [iframeSrc]=\"endpointVisitor.getIframeSrc(endpoint)\">\r\n    </app-iframe>\r\n    <ng-template #link>\r\n        <a [href]=\"endpointVisitor.getIframeSrc(endpoint)\">Download</a>\r\n    </ng-template>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"h-100 d-flex flex-column\">\r\n    <div class=\"form-group p-2\" [ngClass]=\"{'flex-grow-1': getDoesIntegrationTypeRequireIframe(endpoint?.integrationType)}\">\r\n        <label for=\"url\">URL: </label>\r\n        <input type=\"text\" id=\"url\" class=\"form-control\" [(ngModel)]=\"iFrameSrc\" />\r\n    </div>\r\n    <app-iframe class=\"h-100\" *ngIf=\"getDoesIntegrationTypeRequireIframe(endpoint?.integrationType); else link\" [iframeSrc]=\"iFrameSrc\">\r\n    </app-iframe>\r\n    <ng-template #link>\r\n        <a [href]=\"iFrameSrc\">Download</a>\r\n    </ng-template>\r\n</div>");
 
 /***/ }),
 
@@ -526,15 +558,22 @@ var IEndpointVisitor = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EndpointComponent", function() { return EndpointComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _raw_loader_endpoint_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./endpoint.component.html */ "Klhu");
-/* harmony import */ var _endpoint_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./endpoint.component.css */ "FeNy");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "tyNb");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "41Ph");
-/* harmony import */ var src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/services/environment.service */ "qmmW");
-/* harmony import */ var src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/view-logic/endpoint/endpoint.models */ "NlIj");
-
+/* harmony import */ var _raw_loader_endpoint_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./endpoint.component.html */ "Klhu");
+/* harmony import */ var _endpoint_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./endpoint.component.css */ "FeNy");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "41Ph");
+/* harmony import */ var src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/environment.service */ "qmmW");
+/* harmony import */ var src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/view-logic/endpoint/endpoint.models */ "NlIj");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 
 
@@ -551,46 +590,40 @@ var EndpointComponent = /** @class */ (function () {
         var _this = this;
         var environment$ = this.environmentService.getAsObservable();
         var route$ = this.route.params;
-        this.endpointSubscription = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["combineLatest"])([environment$, route$]).subscribe(function (_a) {
-            var _b = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__read"])(_a, 2), environment = _b[0], route = _b[1];
-            return _this.endpoint = _this.endpointVisitor.getEndpoint(environment, route.integrationType, route.usecase);
+        this.endpointSubscription = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["combineLatest"])([environment$, route$]).subscribe(function (_a) {
+            var environment = _a[0], route = _a[1];
+            var endpoint = _this.endpointVisitor.getEndpoint(environment, route.integrationType, route.usecase);
+            _this.endpoint = endpoint;
+            _this.iFrameSrc = _this.endpointVisitor.getIframeSrc(endpoint);
         });
     };
     EndpointComponent.prototype.ngOnDestroy = function () {
         this.endpointSubscription.unsubscribe();
     };
     EndpointComponent.prototype.getDoesIntegrationTypeRequireIframe = function (integrationType) {
-        var e_1, _a;
-        try {
-            for (var _b = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__values"])([src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].Catalog, src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].CatalogItem, src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_7__["IIntegrationType"].ExportDialog]), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var item = _c.value;
-                if (item === integrationType) {
-                    return true;
-                }
+        for (var _i = 0, _a = [src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_6__["IIntegrationType"].Catalog, src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_6__["IIntegrationType"].CatalogItem, src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_6__["IIntegrationType"].ExportDialog]; _i < _a.length; _i++) {
+            var item = _a[_i];
+            if (item === integrationType) {
+                return true;
             }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_1) throw e_1.error; }
         }
         return false;
     };
     EndpointComponent.ctorParameters = function () { return [
-        { type: src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_6__["EnvironmentService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] }
+        { type: src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_5__["EnvironmentService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] }
     ]; };
     EndpointComponent.propDecorators = {
-        endpointVisitor: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"] }]
+        endpointVisitor: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"] }]
     };
-    EndpointComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+    EndpointComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'app-endpoint',
-            template: _raw_loader_endpoint_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-            styles: [_endpoint_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
-        })
+            template: _raw_loader_endpoint_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+            styles: [_endpoint_component_css__WEBPACK_IMPORTED_MODULE_1__["default"]]
+        }),
+        __metadata("design:paramtypes", [src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_5__["EnvironmentService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
     ], EndpointComponent);
     return EndpointComponent;
 }());
@@ -622,22 +655,26 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _raw_loader_app_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./app.component.html */ "VzVu");
-/* harmony import */ var _app_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component.css */ "A3xY");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
+/* harmony import */ var _raw_loader_app_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./app.component.html */ "VzVu");
+/* harmony import */ var _app_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component.css */ "A3xY");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 
 
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
     }
-    AppComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+    AppComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'my-app',
-            template: _raw_loader_app_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-            styles: [_app_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
+            template: _raw_loader_app_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+            styles: [_app_component_css__WEBPACK_IMPORTED_MODULE_1__["default"]]
         })
     ], AppComponent);
     return AppComponent;
@@ -670,23 +707,27 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser/animations */ "R1ws");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "vY5A");
-/* harmony import */ var ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-bootstrap/dropdown */ "dZIy");
-/* harmony import */ var ngx_bootstrap_collapse__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-bootstrap/collapse */ "+Cnu");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "Sy1n");
-/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "hrlM");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var _components_iframe_iframe_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/iframe/iframe.component */ "xKbg");
-/* harmony import */ var _view_logic_endpoint_endpoint_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./view-logic/endpoint/endpoint.component */ "S6fu");
-/* harmony import */ var _view_logic_endpoint_nav_endpoint_nav_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./view-logic/endpoint-nav/endpoint-nav.component */ "4TER");
-/* harmony import */ var _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./view-logic/integrationv1-endpoint/integrationv1-endpoint.component */ "FLFS");
-/* harmony import */ var _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./view-logic/integrationv2-endpoint/integrationv2-endpoint.component */ "jBq7");
-
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser/animations */ "R1ws");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "vY5A");
+/* harmony import */ var ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-bootstrap/dropdown */ "dZIy");
+/* harmony import */ var ngx_bootstrap_collapse__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-bootstrap/collapse */ "+Cnu");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "Sy1n");
+/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "hrlM");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _components_iframe_iframe_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/iframe/iframe.component */ "xKbg");
+/* harmony import */ var _view_logic_endpoint_endpoint_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./view-logic/endpoint/endpoint.component */ "S6fu");
+/* harmony import */ var _view_logic_endpoint_nav_endpoint_nav_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./view-logic/endpoint-nav/endpoint-nav.component */ "4TER");
+/* harmony import */ var _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./view-logic/integrationv1-endpoint/integrationv1-endpoint.component */ "FLFS");
+/* harmony import */ var _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./view-logic/integrationv2-endpoint/integrationv2-endpoint.component */ "jBq7");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 
 
 
@@ -705,13 +746,13 @@ __webpack_require__.r(__webpack_exports__);
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
-    AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
-                ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_6__["BsDropdownModule"].forRoot(), ngx_bootstrap_collapse__WEBPACK_IMPORTED_MODULE_7__["CollapseModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"]],
-            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_9__["NavbarComponent"], _components_iframe_iframe_component__WEBPACK_IMPORTED_MODULE_11__["IframeComponent"], _view_logic_endpoint_endpoint_component__WEBPACK_IMPORTED_MODULE_12__["EndpointComponent"], _view_logic_endpoint_nav_endpoint_nav_component__WEBPACK_IMPORTED_MODULE_13__["EndpointNavComponent"], _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_14__["IntegrationV1EndpointComponent"], _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_15__["IntegrationV2EndpointComponent"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]],
-            providers: [{ provide: _angular_common__WEBPACK_IMPORTED_MODULE_10__["APP_BASE_HREF"], useValue: '/' }]
+    AppModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
+                ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_5__["BsDropdownModule"].forRoot(), ngx_bootstrap_collapse__WEBPACK_IMPORTED_MODULE_6__["CollapseModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"]],
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__["NavbarComponent"], _components_iframe_iframe_component__WEBPACK_IMPORTED_MODULE_10__["IframeComponent"], _view_logic_endpoint_endpoint_component__WEBPACK_IMPORTED_MODULE_11__["EndpointComponent"], _view_logic_endpoint_nav_endpoint_nav_component__WEBPACK_IMPORTED_MODULE_12__["EndpointNavComponent"], _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_13__["IntegrationV1EndpointComponent"], _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_14__["IntegrationV2EndpointComponent"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
+            providers: [{ provide: _angular_common__WEBPACK_IMPORTED_MODULE_9__["APP_BASE_HREF"], useValue: '/' }]
         })
     ], AppModule);
     return AppModule;
@@ -839,11 +880,18 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavbarComponent", function() { return NavbarComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _raw_loader_navbar_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./navbar.component.html */ "S6iF");
-/* harmony import */ var _navbar_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navbar.component.css */ "DIg/");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
+/* harmony import */ var _raw_loader_navbar_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./navbar.component.html */ "S6iF");
+/* harmony import */ var _navbar_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navbar.component.css */ "DIg/");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 
 
@@ -865,16 +913,17 @@ var NavbarComponent = /** @class */ (function () {
     };
     NavbarComponent.ctorParameters = function () { return []; };
     NavbarComponent.propDecorators = {
-        brandName: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"] }],
-        dropdowns: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"] }],
-        dropdownElements: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChildren"], args: ["dropdown",] }]
+        brandName: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"] }],
+        dropdowns: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"] }],
+        dropdownElements: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ViewChildren"], args: ["dropdown",] }]
     };
-    NavbarComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+    NavbarComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'app-navbar',
-            template: _raw_loader_navbar_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-            styles: [_navbar_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
-        })
+            template: _raw_loader_navbar_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+            styles: [_navbar_component_css__WEBPACK_IMPORTED_MODULE_1__["default"]]
+        }),
+        __metadata("design:paramtypes", [])
     ], NavbarComponent);
     return NavbarComponent;
 }());
@@ -894,18 +943,40 @@ var NavbarComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IntegrationV2EndpointComponent", function() { return IntegrationV2EndpointComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IntegrationV2EndpointVisitor", function() { return IntegrationV2EndpointVisitor; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _raw_loader_integrationv2_endpoint_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./integrationv2-endpoint.component.html */ "DvO3");
-/* harmony import */ var _integrationv2_endpoint_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./integrationv2-endpoint.component.css */ "gS6W");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var src_app_constants_config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/constants/config */ "E+pt");
-/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_catalog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-catalog */ "qaMt");
-/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_catalog_item__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-catalog-item */ "yeB7");
-/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_export__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-export */ "+oTD");
-/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_export_dialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-export-dialog */ "3EUf");
-/* harmony import */ var src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/helpers/utils */ "BGy5");
-/* harmony import */ var src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/view-logic/endpoint/endpoint.models */ "NlIj");
-
+/* harmony import */ var _raw_loader_integrationv2_endpoint_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./integrationv2-endpoint.component.html */ "DvO3");
+/* harmony import */ var _integrationv2_endpoint_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./integrationv2-endpoint.component.css */ "gS6W");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var src_app_constants_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/constants/config */ "E+pt");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_catalog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-catalog */ "qaMt");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_catalog_item__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-catalog-item */ "yeB7");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_export__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-export */ "+oTD");
+/* harmony import */ var src_app_constants_test_data_wapi_integrationV2_export_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV2-export-dialog */ "3EUf");
+/* harmony import */ var src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/helpers/utils */ "BGy5");
+/* harmony import */ var src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/view-logic/endpoint/endpoint.models */ "NlIj");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 
 
@@ -923,18 +994,19 @@ var IntegrationV2EndpointComponent = /** @class */ (function () {
     IntegrationV2EndpointComponent.prototype.ngOnInit = function () {
     };
     IntegrationV2EndpointComponent.ctorParameters = function () { return []; };
-    IntegrationV2EndpointComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+    IntegrationV2EndpointComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'app-integrationv2-endpoint',
-            template: _raw_loader_integrationv2_endpoint_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-            styles: [_integrationv2_endpoint_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
-        })
+            template: _raw_loader_integrationv2_endpoint_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+            styles: [_integrationv2_endpoint_component_css__WEBPACK_IMPORTED_MODULE_1__["default"]]
+        }),
+        __metadata("design:paramtypes", [])
     ], IntegrationV2EndpointComponent);
     return IntegrationV2EndpointComponent;
 }());
 
 var IntegrationV2EndpointVisitor = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(IntegrationV2EndpointVisitor, _super);
+    __extends(IntegrationV2EndpointVisitor, _super);
     function IntegrationV2EndpointVisitor() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -943,33 +1015,33 @@ var IntegrationV2EndpointVisitor = /** @class */ (function (_super) {
         if (!testData)
             throw new Error("Testdata not found for integrationtype " + integrationType + " and usecase " + usecase);
         switch (integrationType) {
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog:
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].Catalog:
                 return {
                     domain: environment.domain,
                     integrationKey: testData.integrationKey,
-                    apiUrlSegment: src_app_constants_config__WEBPACK_IMPORTED_MODULE_4__["ApiUrlSegment"],
+                    apiUrlSegment: src_app_constants_config__WEBPACK_IMPORTED_MODULE_3__["ApiUrlSegment"],
                     integrationType: integrationType,
                     catalogKey: testData.catalogKey,
                     catalogItemKeyType: testData.catalogItemKeyType,
                     catalogItemKey: testData.catalogItemKey,
                     searchTerm: testData.searchTerm
                 };
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].CatalogItem:
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].ExportDialog: {
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].CatalogItem:
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].ExportDialog: {
                 return {
                     domain: environment.domain,
                     integrationKey: testData.integrationKey,
-                    apiUrlSegment: src_app_constants_config__WEBPACK_IMPORTED_MODULE_4__["ApiUrlSegment"],
+                    apiUrlSegment: src_app_constants_config__WEBPACK_IMPORTED_MODULE_3__["ApiUrlSegment"],
                     integrationType: integrationType,
                     catalogItemKeyType: testData.catalogItemKeyType,
                     catalogItemKey: testData.catalogItemKey
                 };
             }
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].DirectExport: {
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].DirectExport: {
                 return {
                     domain: environment.domain,
                     integrationKey: testData.integrationKey,
-                    apiUrlSegment: src_app_constants_config__WEBPACK_IMPORTED_MODULE_4__["ApiUrlSegment"],
+                    apiUrlSegment: src_app_constants_config__WEBPACK_IMPORTED_MODULE_3__["ApiUrlSegment"],
                     integrationType: integrationType,
                     catalogItemKeyType: testData.catalogItemKeyType,
                     catalogItemKey: testData.catalogItemKey,
@@ -982,38 +1054,38 @@ var IntegrationV2EndpointVisitor = /** @class */ (function (_super) {
     };
     IntegrationV2EndpointVisitor.prototype.getTestData = function (integrationType, usecase) {
         switch (integrationType) {
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog:
-                return src_app_constants_test_data_wapi_integrationV2_catalog__WEBPACK_IMPORTED_MODULE_5__["IntegrationV2CatalogData"][usecase];
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].CatalogItem:
-                return src_app_constants_test_data_wapi_integrationV2_catalog_item__WEBPACK_IMPORTED_MODULE_6__["IntegrationV2CatalogItemData"][usecase];
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].ExportDialog:
-                return src_app_constants_test_data_wapi_integrationV2_export_dialog__WEBPACK_IMPORTED_MODULE_8__["IntegrationV2ExportDialogData"][usecase];
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].DirectExport:
-                return src_app_constants_test_data_wapi_integrationV2_export__WEBPACK_IMPORTED_MODULE_7__["IntegrationV2ExportData"][usecase];
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].Catalog:
+                return src_app_constants_test_data_wapi_integrationV2_catalog__WEBPACK_IMPORTED_MODULE_4__["IntegrationV2CatalogData"][usecase];
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].CatalogItem:
+                return src_app_constants_test_data_wapi_integrationV2_catalog_item__WEBPACK_IMPORTED_MODULE_5__["IntegrationV2CatalogItemData"][usecase];
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].ExportDialog:
+                return src_app_constants_test_data_wapi_integrationV2_export_dialog__WEBPACK_IMPORTED_MODULE_7__["IntegrationV2ExportDialogData"][usecase];
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].DirectExport:
+                return src_app_constants_test_data_wapi_integrationV2_export__WEBPACK_IMPORTED_MODULE_6__["IntegrationV2ExportData"][usecase];
             default:
                 throw new Error("Enum argument out of range for integrationtype " + integrationType + " and usecase " + usecase);
         }
     };
     IntegrationV2EndpointVisitor.prototype.getIframeSrc = function (endpoint) {
         switch (endpoint.integrationType) {
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog:
-                return !Object(src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_9__["isNullishOrEmptyString"])(endpoint.catalogItemKeyType)
-                    ? endpoint.domain + "/" + endpoint.apiUrlSegment + "/" + src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog + "/" + endpoint.catalogKey + "/" + endpoint.catalogItemKeyType + "/" + endpoint.catalogItemKey + "?integrationKey=" + endpoint.integrationKey
-                    : !Object(src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_9__["isNullishOrEmptyString"])(endpoint.searchTerm)
-                        ? endpoint.domain + "/" + endpoint.apiUrlSegment + "/" + src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog + "/" + endpoint.catalogKey + "/search?searchTerm=" + endpoint.searchTerm + "&integrationKey=" + endpoint.integrationKey
-                        : endpoint.domain + "/" + endpoint.apiUrlSegment + "/" + src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].Catalog + "/" + endpoint.catalogKey + "?integrationKey=" + endpoint.integrationKey;
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].CatalogItem:
-                return endpoint.domain + "/" + endpoint.apiUrlSegment + "/" + src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].CatalogItem + "/" + endpoint.catalogItemKeyType + "/" + endpoint.catalogItemKey + "?integrationKey=" + endpoint.integrationKey;
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].ExportDialog:
-                return endpoint.domain + "/" + endpoint.apiUrlSegment + "/" + src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].ExportDialog + "/" + endpoint.catalogItemKeyType + "/" + endpoint.catalogItemKey + "?integrationKey=" + endpoint.integrationKey;
-            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].DirectExport:
-                return endpoint.domain + "/" + endpoint.apiUrlSegment + "/" + src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IIntegrationType"].DirectExport + "/" + endpoint.catalogItemKeyType + "/" + endpoint.catalogItemKey + "?integrationKey=" + endpoint.integrationKey + "&exportFormat=" + endpoint.exportFormat;
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].Catalog:
+                return !Object(src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_8__["isNullishOrEmptyString"])(endpoint.catalogItemKeyType)
+                    ? endpoint.domain + "/" + endpoint.apiUrlSegment + "/" + src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].Catalog + "/" + endpoint.catalogKey + "/" + endpoint.catalogItemKeyType + "/" + endpoint.catalogItemKey + "?integrationKey=" + endpoint.integrationKey
+                    : !Object(src_app_helpers_utils__WEBPACK_IMPORTED_MODULE_8__["isNullishOrEmptyString"])(endpoint.searchTerm)
+                        ? endpoint.domain + "/" + endpoint.apiUrlSegment + "/" + src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].Catalog + "/" + endpoint.catalogKey + "/search?searchTerm=" + endpoint.searchTerm + "&integrationKey=" + endpoint.integrationKey
+                        : endpoint.domain + "/" + endpoint.apiUrlSegment + "/" + src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].Catalog + "/" + endpoint.catalogKey + "?integrationKey=" + endpoint.integrationKey;
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].CatalogItem:
+                return endpoint.domain + "/" + endpoint.apiUrlSegment + "/" + src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].CatalogItem + "/" + endpoint.catalogItemKeyType + "/" + endpoint.catalogItemKey + "?integrationKey=" + endpoint.integrationKey;
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].ExportDialog:
+                return endpoint.domain + "/" + endpoint.apiUrlSegment + "/" + src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].ExportDialog + "/" + endpoint.catalogItemKeyType + "/" + endpoint.catalogItemKey + "?integrationKey=" + endpoint.integrationKey;
+            case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].DirectExport:
+                return endpoint.domain + "/" + endpoint.apiUrlSegment + "/" + src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].DirectExport + "/" + endpoint.catalogItemKeyType + "/" + endpoint.catalogItemKey + "?integrationKey=" + endpoint.integrationKey + "&exportFormat=" + endpoint.exportFormat;
             default:
                 throw new Error("Enum argument out of range for integrationtype " + endpoint.integrationType);
         }
     };
     return IntegrationV2EndpointVisitor;
-}(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_10__["IEndpointVisitor"]));
+}(src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IEndpointVisitor"]));
 
 
 
@@ -1113,17 +1185,24 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EnvironmentService", function() { return EnvironmentService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "41Ph");
-/* harmony import */ var _environment_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environment.model */ "B9W6");
-
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "41Ph");
+/* harmony import */ var _environment_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./environment.model */ "B9W6");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 
 
 var EnvironmentService = /** @class */ (function () {
     function EnvironmentService() {
-        this.currentEnvironment = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](_environment_model__WEBPACK_IMPORTED_MODULE_3__["Environment"].localhost);
+        this.currentEnvironment = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](_environment_model__WEBPACK_IMPORTED_MODULE_2__["Environment"].localhost);
     }
     EnvironmentService.prototype.set = function (value) {
         this.currentEnvironment.next(value);
@@ -1132,10 +1211,11 @@ var EnvironmentService = /** @class */ (function () {
         return this.currentEnvironment.asObservable();
     };
     EnvironmentService.ctorParameters = function () { return []; };
-    EnvironmentService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+    EnvironmentService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
-        })
+        }),
+        __metadata("design:paramtypes", [])
     ], EnvironmentService);
     return EnvironmentService;
 }());
@@ -1167,15 +1247,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "tyNb");
-/* harmony import */ var _view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./view-logic/endpoint/endpoint.models */ "NlIj");
-/* harmony import */ var _services_usecase_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./services/usecase.model */ "AdMs");
-/* harmony import */ var _constants_config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants/config */ "E+pt");
-/* harmony import */ var _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./view-logic/integrationv1-endpoint/integrationv1-endpoint.component */ "FLFS");
-/* harmony import */ var _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./view-logic/integrationv2-endpoint/integrationv2-endpoint.component */ "jBq7");
-
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./view-logic/endpoint/endpoint.models */ "NlIj");
+/* harmony import */ var _services_usecase_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services/usecase.model */ "AdMs");
+/* harmony import */ var _constants_config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants/config */ "E+pt");
+/* harmony import */ var _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./view-logic/integrationv1-endpoint/integrationv1-endpoint.component */ "FLFS");
+/* harmony import */ var _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./view-logic/integrationv2-endpoint/integrationv2-endpoint.component */ "jBq7");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 
 
 
@@ -1184,19 +1268,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [
-    { path: _constants_config__WEBPACK_IMPORTED_MODULE_5__["legacyRoutingSegment"] + "/:integrationType", component: _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_6__["IntegrationV1EndpointComponent"] },
-    { path: ':integrationType/:usecase', component: _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_7__["IntegrationV2EndpointComponent"] },
-    { path: '', redirectTo: _view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_3__["IIntegrationType"].Catalog + "/" + _services_usecase_model__WEBPACK_IMPORTED_MODULE_4__["IUsecase"].Default, pathMatch: 'full' },
-    { path: '**', redirectTo: _view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_3__["IIntegrationType"].Catalog + "/" + _services_usecase_model__WEBPACK_IMPORTED_MODULE_4__["IUsecase"].Default }
+    { path: _constants_config__WEBPACK_IMPORTED_MODULE_4__["legacyRoutingSegment"] + "/:integrationType", component: _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_5__["IntegrationV1EndpointComponent"] },
+    { path: ':integrationType/:usecase', component: _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_6__["IntegrationV2EndpointComponent"] },
+    { path: '', redirectTo: _view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_2__["IIntegrationType"].Catalog + "/" + _services_usecase_model__WEBPACK_IMPORTED_MODULE_3__["IUsecase"].Default, pathMatch: 'full' },
+    { path: '**', redirectTo: _view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_2__["IIntegrationType"].Catalog + "/" + _services_usecase_model__WEBPACK_IMPORTED_MODULE_3__["IUsecase"].Default }
 ];
 // configures NgModule imports and exports
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
-    AppRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
-            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+    AppRoutingModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
         })
     ], AppRoutingModule);
     return AppRoutingModule;
@@ -1216,12 +1300,19 @@ var AppRoutingModule = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IframeComponent", function() { return IframeComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _raw_loader_iframe_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./iframe.component.html */ "qguy");
-/* harmony import */ var _iframe_component_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./iframe.component.css */ "keim");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
-
+/* harmony import */ var _raw_loader_iframe_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./iframe.component.html */ "qguy");
+/* harmony import */ var _iframe_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iframe.component.css */ "keim");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 
 
@@ -1236,17 +1327,18 @@ var IframeComponent = /** @class */ (function () {
         this.sanitizedIFrameSrc = this.sanitizer.bypassSecurityTrustResourceUrl(this.iframeSrc);
     };
     IframeComponent.ctorParameters = function () { return [
-        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["DomSanitizer"] }
+        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"] }
     ]; };
     IframeComponent.propDecorators = {
-        iframeSrc: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"] }]
+        iframeSrc: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"] }]
     };
-    IframeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+    IframeComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'app-iframe',
-            template: _raw_loader_iframe_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-            styles: [_iframe_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
-        })
+            template: _raw_loader_iframe_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+            styles: [_iframe_component_css__WEBPACK_IMPORTED_MODULE_1__["default"]]
+        }),
+        __metadata("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"]])
     ], IframeComponent);
     return IframeComponent;
 }());
