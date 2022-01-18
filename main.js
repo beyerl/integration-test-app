@@ -1136,13 +1136,6 @@ var IntegrationV2CatalogData = {
         searchTerm: '',
         integrationKey: '7EB839FF-5C9B-4D2D-A4A3-CFBD153E047D',
     },
-    legacyPositionId: {
-        catalogKey: 'integration-app',
-        catalogItemKeyType: 'legacyPositionId',
-        catalogItemKey: '10',
-        searchTerm: '',
-        integrationKey: '7EB839FF-5C9B-4D2D-A4A3-CFBD153E047D',
-    },
     refnr: {
         catalogKey: 'integration-app',
         catalogItemKeyType: 'refnr',
@@ -1389,11 +1382,6 @@ var IntegrationV2CatalogItemData = {
     guid: {
         "catalogItemKeyType": "guid",
         "catalogItemKey": "ED70588A-617E-4F24-9214-0EEC52949764",
-        "integrationKey": "BE6C0DE4-166C-4F52-974F-B7E165E2FF6C",
-    },
-    legacyPositionId: {
-        "catalogItemKeyType": "legacyPositionId",
-        "catalogItemKey": "10",
         "integrationKey": "BE6C0DE4-166C-4F52-974F-B7E165E2FF6C",
     },
     refnr: {
