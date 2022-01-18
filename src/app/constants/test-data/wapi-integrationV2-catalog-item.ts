@@ -6,11 +6,6 @@ export const IntegrationV2CatalogItemData: { [key: string]: IIntegrationV2Testda
     "catalogItemKey": "ED70588A-617E-4F24-9214-0EEC52949764",
     "integrationKey": "BE6C0DE4-166C-4F52-974F-B7E165E2FF6C",
   },
-  legacyPositionId: {
-    "catalogItemKeyType": "legacyPositionId",
-    "catalogItemKey": "10",
-    "integrationKey": "BE6C0DE4-166C-4F52-974F-B7E165E2FF6C",
-  },
   refnr: {
     "catalogItemKeyType": "refnr",
     "catalogItemKey": "1",

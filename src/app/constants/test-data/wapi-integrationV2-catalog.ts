@@ -22,13 +22,6 @@ export const IntegrationV2CatalogData: { [key: string]: IIntegrationV2Testdata }
     searchTerm: '',
     integrationKey: '7EB839FF-5C9B-4D2D-A4A3-CFBD153E047D',
   },
-  legacyPositionId: {
-    catalogKey: 'integration-app',
-    catalogItemKeyType: 'legacyPositionId',
-    catalogItemKey: '10',
-    searchTerm: '',
-    integrationKey: '7EB839FF-5C9B-4D2D-A4A3-CFBD153E047D',
-  },
   refnr: {
     catalogKey: 'integration-app',
     catalogItemKeyType: 'refnr',
