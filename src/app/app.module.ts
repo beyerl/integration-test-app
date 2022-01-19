@@ -23,8 +23,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
   declarations: [AppComponent, NavbarComponent, IframeComponent, EndpointComponent, EndpointNavComponent, IntegrationV1EndpointComponent, IntegrationV2EndpointComponent],
   bootstrap: [AppComponent],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
-    { provide: APP_BASE_HREF, useValue: '/integration-test-app' }
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
 })
 export class AppModule { }
