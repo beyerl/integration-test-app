@@ -123,6 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/services/environment.service */ "qmmW");
 /* harmony import */ var src_app_constants_test_data_wapi_integrationV1__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV1 */ "yRfF");
 /* harmony import */ var src_app_constants_config__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! src/app/constants/config */ "E+pt");
+/* harmony import */ var src_app_app_routing_module__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! src/app/app-routing.module */ "vY5A");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -132,6 +133,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -191,7 +193,7 @@ var EndpointNavComponent = /** @class */ (function () {
         ];
         this.currentEnvironment = src_app_services_environment_model__WEBPACK_IMPORTED_MODULE_10__["Environment"].localhost;
         this.onIntegrationV2DropdownItemClick = function (integrationType, usecase) {
-            _this.router.navigateByUrl("/" + integrationType + "/" + usecase);
+            _this.router.navigateByUrl("/" + src_app_app_routing_module__WEBPACK_IMPORTED_MODULE_14__["baseHref"] + "/" + integrationType + "/" + usecase);
         };
         this.onDropdownIntegrationV1ItemClick = function (integrationType) {
             _this.router.navigateByUrl(src_app_constants_config__WEBPACK_IMPORTED_MODULE_13__["legacyRoutingSegment"] + "/" + integrationType);
@@ -903,9 +905,6 @@ var NavbarComponent = /** @class */ (function () {
     }
     NavbarComponent.prototype.ngOnInit = function () {
     };
-    NavbarComponent.prototype.ngAfterViewInit = function () {
-        console.log(this.dropdownElements);
-    };
     NavbarComponent.prototype.onToggleDropdown = function (clickedIndex) {
         for (var i = 0; i < this.dropdownElements.length; i++) {
             if (i === clickedIndex)
@@ -1237,11 +1236,12 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
   \***************************************/
-/*! exports provided: AppRoutingModule */
+/*! exports provided: baseHref, AppRoutingModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "baseHref", function() { return baseHref; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "tyNb");
