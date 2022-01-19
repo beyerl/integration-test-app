@@ -14,6 +14,7 @@ var IntegrationV2ExportData = {
     guid: {
         "catalogItemKeyType": "guid",
         "catalogItemKey": "ED70588A-617E-4F24-9214-0EEC52949764",
+        "catalogItemKeyQS": "C7276B8C-00F3-4762-A5E8-9404B4A31C8B",
         "integrationKey": "6A44BF70-AA8C-4D37-BD63-AB99A01B65F5",
     },
     legacyPositionId: {
@@ -75,6 +76,7 @@ var IntegrationV2ExportDialogData = {
     guid: {
         "catalogItemKeyType": "guid",
         "catalogItemKey": "ED70588A-617E-4F24-9214-0EEC52949764",
+        "catalogItemKeyQS": "C7276B8C-00F3-4762-A5E8-9404B4A31C8B",
         "integrationKey": "2D9CCEE9-E078-4088-8430-8423DABBEFEE",
     },
     legacyPositionId: {
@@ -1023,7 +1025,7 @@ var IntegrationV2EndpointVisitor = /** @class */ (function (_super) {
                     integrationType: integrationType,
                     catalogKey: testData.catalogKey,
                     catalogItemKeyType: testData.catalogItemKeyType,
-                    catalogItemKey: testData.catalogItemKey,
+                    catalogItemKey: environment.title === "Qs" && testData.catalogItemKeyQS ? testData.catalogItemKeyQS : testData.catalogItemKey,
                     searchTerm: testData.searchTerm
                 };
             case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].CatalogItem:
@@ -1034,7 +1036,7 @@ var IntegrationV2EndpointVisitor = /** @class */ (function (_super) {
                     apiUrlSegment: src_app_constants_config__WEBPACK_IMPORTED_MODULE_3__["ApiUrlSegment"],
                     integrationType: integrationType,
                     catalogItemKeyType: testData.catalogItemKeyType,
-                    catalogItemKey: testData.catalogItemKey
+                    catalogItemKey: environment.title === "Qs" && testData.catalogItemKeyQS ? testData.catalogItemKeyQS : testData.catalogItemKey,
                 };
             }
             case src_app_view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_9__["IIntegrationType"].DirectExport: {
@@ -1044,7 +1046,7 @@ var IntegrationV2EndpointVisitor = /** @class */ (function (_super) {
                     apiUrlSegment: src_app_constants_config__WEBPACK_IMPORTED_MODULE_3__["ApiUrlSegment"],
                     integrationType: integrationType,
                     catalogItemKeyType: testData.catalogItemKeyType,
-                    catalogItemKey: testData.catalogItemKey,
+                    catalogItemKey: environment.title === "Qs" && testData.catalogItemKeyQS ? testData.catalogItemKeyQS : testData.catalogItemKey,
                     exportFormat: "101"
                 };
             }
@@ -1133,6 +1135,7 @@ var IntegrationV2CatalogData = {
         catalogKey: 'integration-app',
         catalogItemKeyType: 'guid',
         catalogItemKey: 'ed70588a-617e-4f24-9214-0eec52949764',
+        catalogItemKeyQS: "C7276B8C-00F3-4762-A5E8-9404B4A31C8B",
         searchTerm: '',
         integrationKey: '7EB839FF-5C9B-4D2D-A4A3-CFBD153E047D',
     },
@@ -1382,6 +1385,7 @@ var IntegrationV2CatalogItemData = {
     guid: {
         "catalogItemKeyType": "guid",
         "catalogItemKey": "ED70588A-617E-4F24-9214-0EEC52949764",
+        "catalogItemKeyQS": "C7276B8C-00F3-4762-A5E8-9404B4A31C8B",
         "integrationKey": "BE6C0DE4-166C-4F52-974F-B7E165E2FF6C",
     },
     refnr: {
