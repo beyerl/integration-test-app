@@ -123,7 +123,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_environment_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/services/environment.service */ "qmmW");
 /* harmony import */ var src_app_constants_test_data_wapi_integrationV1__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! src/app/constants/test-data/wapi-integrationV1 */ "yRfF");
 /* harmony import */ var src_app_constants_config__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! src/app/constants/config */ "E+pt");
-/* harmony import */ var src_app_app_routing_module__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! src/app/app-routing.module */ "vY5A");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -133,7 +132,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -193,7 +191,7 @@ var EndpointNavComponent = /** @class */ (function () {
         ];
         this.currentEnvironment = src_app_services_environment_model__WEBPACK_IMPORTED_MODULE_10__["Environment"].localhost;
         this.onIntegrationV2DropdownItemClick = function (integrationType, usecase) {
-            _this.router.navigateByUrl("/" + src_app_app_routing_module__WEBPACK_IMPORTED_MODULE_14__["baseHref"] + "/" + integrationType + "/" + usecase);
+            _this.router.navigateByUrl("/" + integrationType + "/" + usecase);
         };
         this.onDropdownIntegrationV1ItemClick = function (integrationType) {
             _this.router.navigateByUrl(src_app_constants_config__WEBPACK_IMPORTED_MODULE_13__["legacyRoutingSegment"] + "/" + integrationType);
@@ -756,7 +754,7 @@ var AppModule = /** @class */ (function () {
                 ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_5__["BsDropdownModule"].forRoot(), ngx_bootstrap_collapse__WEBPACK_IMPORTED_MODULE_6__["CollapseModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"]],
             declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__["NavbarComponent"], _components_iframe_iframe_component__WEBPACK_IMPORTED_MODULE_10__["IframeComponent"], _view_logic_endpoint_endpoint_component__WEBPACK_IMPORTED_MODULE_11__["EndpointComponent"], _view_logic_endpoint_nav_endpoint_nav_component__WEBPACK_IMPORTED_MODULE_12__["EndpointNavComponent"], _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_13__["IntegrationV1EndpointComponent"], _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_14__["IntegrationV2EndpointComponent"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
-            providers: [{ provide: _angular_common__WEBPACK_IMPORTED_MODULE_9__["APP_BASE_HREF"], useValue: '/' }]
+            providers: [{ provide: _angular_common__WEBPACK_IMPORTED_MODULE_9__["APP_BASE_HREF"], useValue: '/integration-test-app' }]
         })
     ], AppModule);
     return AppModule;
@@ -1236,12 +1234,11 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
   \***************************************/
-/*! exports provided: baseHref, AppRoutingModule */
+/*! exports provided: AppRoutingModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "baseHref", function() { return baseHref; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "tyNb");
@@ -1263,12 +1260,11 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-var baseHref = "integration-test-app";
 var routes = [
-    { path: baseHref + "/" + _constants_config__WEBPACK_IMPORTED_MODULE_4__["legacyRoutingSegment"] + "/:integrationType", component: _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_5__["IntegrationV1EndpointComponent"] },
-    { path: baseHref + "/:integrationType/:usecase", component: _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_6__["IntegrationV2EndpointComponent"] },
-    { path: baseHref + "/", redirectTo: _view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_2__["IIntegrationType"].Catalog + "/" + _services_usecase_model__WEBPACK_IMPORTED_MODULE_3__["IUsecase"].Default, pathMatch: 'full' },
-    { path: baseHref + "/**", redirectTo: _view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_2__["IIntegrationType"].Catalog + "/" + _services_usecase_model__WEBPACK_IMPORTED_MODULE_3__["IUsecase"].Default }
+    { path: _constants_config__WEBPACK_IMPORTED_MODULE_4__["legacyRoutingSegment"] + "/:integrationType", component: _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_5__["IntegrationV1EndpointComponent"] },
+    { path: ':integrationType/:usecase', component: _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_6__["IntegrationV2EndpointComponent"] },
+    { path: '', redirectTo: _view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_2__["IIntegrationType"].Catalog + "/" + _services_usecase_model__WEBPACK_IMPORTED_MODULE_3__["IUsecase"].Default, pathMatch: 'full' },
+    { path: '**', redirectTo: _view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_2__["IIntegrationType"].Catalog + "/" + _services_usecase_model__WEBPACK_IMPORTED_MODULE_3__["IUsecase"].Default }
 ];
 // configures NgModule imports and exports
 var AppRoutingModule = /** @class */ (function () {
