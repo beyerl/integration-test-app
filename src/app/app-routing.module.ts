@@ -6,7 +6,7 @@ import { legacyRoutingSegment } from './constants/config';
 import { IntegrationV1EndpointComponent } from './view-logic/integrationv1-endpoint/integrationv1-endpoint.component';
 import { IntegrationV2EndpointComponent } from './view-logic/integrationv2-endpoint/integrationv2-endpoint.component';
 
-const baseHref = "integration-test-app"
+export const baseHref = "integration-test-app"
 
 const routes: Routes = [
     { path: `${baseHref}/${legacyRoutingSegment}/:integrationType`, component: IntegrationV1EndpointComponent },

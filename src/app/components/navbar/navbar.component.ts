@@ -7,7 +7,7 @@ import { IDropdown, IDropdownItem, INavbarItem } from './navbar.model';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit, AfterViewInit {
+export class NavbarComponent implements OnInit {
   isCollapsed = false;
 
   @Input() brandName: string
@@ -18,10 +18,6 @@ export class NavbarComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
 
-  }
-
-  ngAfterViewInit() {
-    console.log(this.dropdownElements)
   }
 
   onToggleDropdown(clickedIndex: number) {
