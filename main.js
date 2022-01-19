@@ -745,6 +745,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -754,7 +755,10 @@ var AppModule = /** @class */ (function () {
                 ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_5__["BsDropdownModule"].forRoot(), ngx_bootstrap_collapse__WEBPACK_IMPORTED_MODULE_6__["CollapseModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"]],
             declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__["NavbarComponent"], _components_iframe_iframe_component__WEBPACK_IMPORTED_MODULE_10__["IframeComponent"], _view_logic_endpoint_endpoint_component__WEBPACK_IMPORTED_MODULE_11__["EndpointComponent"], _view_logic_endpoint_nav_endpoint_nav_component__WEBPACK_IMPORTED_MODULE_12__["EndpointNavComponent"], _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_13__["IntegrationV1EndpointComponent"], _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_14__["IntegrationV2EndpointComponent"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
-            providers: [{ provide: _angular_common__WEBPACK_IMPORTED_MODULE_9__["APP_BASE_HREF"], useValue: '/integration-test-app' }]
+            providers: [
+                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_9__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_9__["HashLocationStrategy"] },
+                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_9__["APP_BASE_HREF"], useValue: '/integration-test-app' }
+            ],
         })
     ], AppModule);
     return AppModule;
