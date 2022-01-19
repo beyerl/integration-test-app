@@ -1263,11 +1263,12 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+var baseHref = "integration-test-app";
 var routes = [
-    { path: _constants_config__WEBPACK_IMPORTED_MODULE_4__["legacyRoutingSegment"] + "/:integrationType", component: _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_5__["IntegrationV1EndpointComponent"] },
-    { path: ':integrationType/:usecase', component: _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_6__["IntegrationV2EndpointComponent"] },
-    { path: '', redirectTo: _view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_2__["IIntegrationType"].Catalog + "/" + _services_usecase_model__WEBPACK_IMPORTED_MODULE_3__["IUsecase"].Default, pathMatch: 'full' },
-    { path: '**', redirectTo: _view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_2__["IIntegrationType"].Catalog + "/" + _services_usecase_model__WEBPACK_IMPORTED_MODULE_3__["IUsecase"].Default }
+    { path: baseHref + "/" + _constants_config__WEBPACK_IMPORTED_MODULE_4__["legacyRoutingSegment"] + "/:integrationType", component: _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_5__["IntegrationV1EndpointComponent"] },
+    { path: baseHref + "/:integrationType/:usecase", component: _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_6__["IntegrationV2EndpointComponent"] },
+    { path: baseHref + "/", redirectTo: _view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_2__["IIntegrationType"].Catalog + "/" + _services_usecase_model__WEBPACK_IMPORTED_MODULE_3__["IUsecase"].Default, pathMatch: 'full' },
+    { path: baseHref + "/**", redirectTo: _view_logic_endpoint_endpoint_models__WEBPACK_IMPORTED_MODULE_2__["IIntegrationType"].Catalog + "/" + _services_usecase_model__WEBPACK_IMPORTED_MODULE_3__["IUsecase"].Default }
 ];
 // configures NgModule imports and exports
 var AppRoutingModule = /** @class */ (function () {
