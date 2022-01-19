@@ -718,19 +718,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_bootstrap_collapse__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-bootstrap/collapse */ "+Cnu");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "Sy1n");
 /* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "hrlM");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var _components_iframe_iframe_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/iframe/iframe.component */ "xKbg");
-/* harmony import */ var _view_logic_endpoint_endpoint_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./view-logic/endpoint/endpoint.component */ "S6fu");
-/* harmony import */ var _view_logic_endpoint_nav_endpoint_nav_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./view-logic/endpoint-nav/endpoint-nav.component */ "4TER");
-/* harmony import */ var _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./view-logic/integrationv1-endpoint/integrationv1-endpoint.component */ "FLFS");
-/* harmony import */ var _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./view-logic/integrationv2-endpoint/integrationv2-endpoint.component */ "jBq7");
+/* harmony import */ var _components_iframe_iframe_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/iframe/iframe.component */ "xKbg");
+/* harmony import */ var _view_logic_endpoint_endpoint_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./view-logic/endpoint/endpoint.component */ "S6fu");
+/* harmony import */ var _view_logic_endpoint_nav_endpoint_nav_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./view-logic/endpoint-nav/endpoint-nav.component */ "4TER");
+/* harmony import */ var _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./view-logic/integrationv1-endpoint/integrationv1-endpoint.component */ "FLFS");
+/* harmony import */ var _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./view-logic/integrationv2-endpoint/integrationv2-endpoint.component */ "jBq7");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common */ "ofXK");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -753,11 +752,10 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
                 ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_5__["BsDropdownModule"].forRoot(), ngx_bootstrap_collapse__WEBPACK_IMPORTED_MODULE_6__["CollapseModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"]],
-            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__["NavbarComponent"], _components_iframe_iframe_component__WEBPACK_IMPORTED_MODULE_10__["IframeComponent"], _view_logic_endpoint_endpoint_component__WEBPACK_IMPORTED_MODULE_11__["EndpointComponent"], _view_logic_endpoint_nav_endpoint_nav_component__WEBPACK_IMPORTED_MODULE_12__["EndpointNavComponent"], _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_13__["IntegrationV1EndpointComponent"], _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_14__["IntegrationV2EndpointComponent"]],
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__["NavbarComponent"], _components_iframe_iframe_component__WEBPACK_IMPORTED_MODULE_9__["IframeComponent"], _view_logic_endpoint_endpoint_component__WEBPACK_IMPORTED_MODULE_10__["EndpointComponent"], _view_logic_endpoint_nav_endpoint_nav_component__WEBPACK_IMPORTED_MODULE_11__["EndpointNavComponent"], _view_logic_integrationv1_endpoint_integrationv1_endpoint_component__WEBPACK_IMPORTED_MODULE_12__["IntegrationV1EndpointComponent"], _view_logic_integrationv2_endpoint_integrationv2_endpoint_component__WEBPACK_IMPORTED_MODULE_13__["IntegrationV2EndpointComponent"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
             providers: [
-                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_9__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_9__["HashLocationStrategy"] },
-                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_9__["APP_BASE_HREF"], useValue: '/integration-test-app' }
+                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_14__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_14__["HashLocationStrategy"] }
             ],
         })
     ], AppModule);
