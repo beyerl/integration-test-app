@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Directive, OnInit } from '@angular/core';
 import { ApiUrlSegment } from 'src/app/constants/config';
 import { IntegrationV2CatalogData } from 'src/app/constants/test-data/wapi-integrationV2-catalog';
 import { IntegrationV2CatalogItemData } from 'src/app/constants/test-data/wapi-integrationV2-catalog-item';
@@ -9,6 +9,8 @@ import { IEndpoint, IEndpointVisitor, IIntegrationType } from 'src/app/view-logi
 import { IEnvironment } from 'src/app/services/environment.model';
 import { IIntegrationV2Testdata } from 'src/app/services/test-data.model';
 import { IUsecase } from 'src/app/services/usecase.model';
+import { Subscription } from 'rxjs';
+import { EnvironmentService } from 'src/app/services/environment.service';
 
 @Component({
   selector: 'app-integrationv2-endpoint',
@@ -25,6 +27,7 @@ export class IntegrationV2EndpointComponent implements OnInit {
   }
 }
 
+
 export class IntegrationV2EndpointVisitor extends IEndpointVisitor {
   public getEndpoint(environment: IEnvironment, integrationType: IIntegrationType, usecase: IUsecase): IEndpoint {
     const testData = this.getTestData(integrationType, usecase)
@@ -39,7 +42,7 @@ export class IntegrationV2EndpointVisitor extends IEndpointVisitor {
           integrationType,
           catalogKey: testData.catalogKey,
           catalogItemKeyType: testData.catalogItemKeyType,
-          catalogItemKey: testData.catalogItemKey,
+          catalogItemKey: environment.title === "Qs" && testData.catalogItemKeyQS ? testData.catalogItemKeyQS : testData.catalogItemKey,
           searchTerm: testData.searchTerm
         }
       case IIntegrationType.CatalogItem:
@@ -50,7 +53,7 @@ export class IntegrationV2EndpointVisitor extends IEndpointVisitor {
           apiUrlSegment: ApiUrlSegment,
           integrationType,
           catalogItemKeyType: testData.catalogItemKeyType,
-          catalogItemKey: testData.catalogItemKey
+          catalogItemKey: environment.title === "Qs" && testData.catalogItemKeyQS ? testData.catalogItemKeyQS : testData.catalogItemKey,
         }
       }
       case IIntegrationType.DirectExport: {
@@ -60,7 +63,7 @@ export class IntegrationV2EndpointVisitor extends IEndpointVisitor {
           apiUrlSegment: ApiUrlSegment,
           integrationType,
           catalogItemKeyType: testData.catalogItemKeyType,
-          catalogItemKey: testData.catalogItemKey,
+          catalogItemKey: environment.title === "Qs" && testData.catalogItemKeyQS ? testData.catalogItemKeyQS : testData.catalogItemKey,
           exportFormat: "101"
         }
       }

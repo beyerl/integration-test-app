@@ -19,6 +19,7 @@ export const IntegrationV2CatalogData: { [key: string]: IIntegrationV2Testdata }
     catalogKey: 'integration-app',
     catalogItemKeyType: 'guid',
     catalogItemKey: 'ed70588a-617e-4f24-9214-0eec52949764',
+    catalogItemKeyQS: "C7276B8C-00F3-4762-A5E8-9404B4A31C8B",
     searchTerm: '',
     integrationKey: '7EB839FF-5C9B-4D2D-A4A3-CFBD153E047D',
   },
