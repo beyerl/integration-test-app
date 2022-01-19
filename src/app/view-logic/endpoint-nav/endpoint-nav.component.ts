@@ -14,8 +14,6 @@ import { IIntegrationV2Testdata } from 'src/app/services/test-data.model';
 import { IUsecase } from 'src/app/services/usecase.model';
 import { IntegrationV1Data } from 'src/app/constants/test-data/wapi-integrationV1';
 import { legacyRoutingSegment } from 'src/app/constants/config';
-import { baseHref } from 'src/app/app-routing.module';
-
 
 @Component({
   selector: 'app-endpoint-nav',
@@ -106,7 +104,7 @@ export class EndpointNavComponent implements OnInit, OnDestroy {
   }
 
   public onIntegrationV2DropdownItemClick = (integrationType: IIntegrationType, usecase: IUsecase) => {
-    this.router.navigateByUrl(`/${baseHref}/${integrationType}/${usecase}`)
+    this.router.navigateByUrl(`/${integrationType}/${usecase}`)
   }
 
   private getIntegrationV1DropdownItems() {

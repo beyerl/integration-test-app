@@ -21,6 +21,6 @@ import { IntegrationV2EndpointComponent } from './view-logic/integrationv2-endpo
     BsDropdownModule.forRoot(), CollapseModule.forRoot(), AppRoutingModule],
   declarations: [AppComponent, NavbarComponent, IframeComponent, EndpointComponent, EndpointNavComponent, IntegrationV1EndpointComponent, IntegrationV2EndpointComponent],
   bootstrap: [AppComponent],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
+  providers: [{ provide: APP_BASE_HREF, useValue: '/integration-test-app' }]
 })
 export class AppModule { }
