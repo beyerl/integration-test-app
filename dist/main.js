@@ -310,8 +310,8 @@ __webpack_require__.r(__webpack_exports__);
 var Environment = {
     localhost: { title: "Localhost", domain: "https://localhost:44900" },
     localhostIE: { title: "LocalhostIE", domain: "https://localhost:44950" },
-    dev: { title: "Dev", domain: "https://dev.ade.adesystem.net" },
-    qs: { title: "Qs", domain: "https://qs.ade.adesystem.net" }
+    dev: { title: "Dev", domain: "https://dev.ade.orcalab.de" },
+    qs: { title: "Qs", domain: "https://qs.ade.orcalab.de" }
 };
 
 
